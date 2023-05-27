@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin>
+
+  <!-- Templates -->
+
+  <screen name="PlayerTemplate">
+    <widget source="session.CurrentService" render="Label" position="c-416,4" size="832,52" backgroundColor="transparent" zPosition="1" foregroundColor="foreground" borderWidth="2" font="Regular;24" borderColor="black" verticalAlignment="center" horizontalAlignment="center">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <eLabel backgroundColor="infobarBG" position="20,56" size="1040,14" zPosition="0"/>
+    <ePixmap pixmap="PLi-HD/dvr/scale1024.png" position="28,61" size="1024,4" zPosition="1"/>
+    <widget source="session.CurrentService" render="PositionGauge" position="28,57" size="1024,12" transparent="1" zPosition="4" pointer="PLi-HD/dvr/position_pointer1024.png:1012,0">
+      <convert type="ServicePosition">Gauge</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="28,31" size="90,25" backgroundColor="transparent" zPosition="4" foregroundColor="foreground" borderWidth="2" font="Regular;22" borderColor="black" verticalAlignment="center" horizontalAlignment="left">
+      <convert type="ServicePosition">Position,ShowHours</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="935,31" size="117,25" backgroundColor="transparent" zPosition="4" foregroundColor="foreground" borderWidth="2" font="Regular;22" borderColor="black" verticalAlignment="center" horizontalAlignment="right">
+      <convert type="ServicePosition">Remaining,Plus,ShowHours</convert>
+    </widget>
+    <widget source="session.RecordState" render="Pixmap" pixmap="PLi-HD/buttons/rec.png" position="1060,53" size="20,20" zPosition="3" alphaTest="on">
+      <convert type="ConditionalShowHide"/>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" borderWidth="2" position="952,3" size="100,25" backgroundColor="transparent" noWrap="1" zPosition="1" foregroundColor="foreground" font="Regular;22" verticalAlignment="center" horizontalAlignment="right">
+      <convert type="ClockToText"/>
+      <!--convert type="ClockToText">Format:%-H:%M</convert-->
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="c-73,70" size="146,21" zPosition="2" backgroundColor="transparent" foregroundColor="foreground" font="Regular;20" borderWidth="2" verticalAlignment="top" horizontalAlignment="center">
+      <convert type="PliExtraInfo">ResolutionString</convert>
+    </widget>
+    <eLabel position="28,70" size="150,130" backgroundColor="transparent" borderWidth="2" font="Regular;25" borderColor="black" horizontalAlignment="left" text=">" zPosition="1"/>
+  </screen>
+
+  <screen name="TopTemplate">
+    <eLabel position="0,0" size="1280,58" backgroundColor="toptemplatecolor"/>
+    <ePixmap pixmap="PLi-HD/border/smallshadowline.png" position="0,58" size="1280,2" zPosition="2"/>
+    <widget source="ScreenPath" render="Label" position="20,3" size="1240,14" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;13" verticalAlignment="center" horizontalAlignment="left"/>
+    <widget source="Title" render="Label" position="20,5" size="1240,50" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;24" verticalAlignment="center" horizontalAlignment="left"/>
+    <widget source="global.CurrentTime" render="Label" position="1110,15" size="150,25" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;24" verticalAlignment="center" horizontalAlignment="right">
+      <convert type="ClockToText"/>
+      <!--convert type="ClockToText">Format:%-H:%M</convert-->
+    </widget>
+    <widget source="global.CurrentTime" render="Label" position="960,35" size="300,25" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;16" verticalAlignment="center" horizontalAlignment="right">
+      <convert type="ClockToText">Date</convert>
+    </widget>
+  </screen>
+
+  <screen name="BasicTemplate">
+    <panel name="TopTemplate"/>
+    <panel name="ButtonTemplate"/>
+    <eLabel position="0,682" size="1280,38" backgroundColor="basictemplatecolor"/>
+    <ePixmap pixmap="PLi-HD/border/smallshadowline.png" position="0,680" size="1280,2"/>
+  </screen>
+
+  <screen name="TextTemplate">
+    <widget name="text" position="20,378" size="480,299" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;24"/>
+  </screen>
+
+  <screen name="SelectionTemplate">
+    <panel name="BasicTemplate"/>
+    <widget source="session.VideoPicture" render="Pig" position="20,80" size="480,270" backgroundColor="transparent" zPosition="1"/>
+    <widget source="session.CurrentService" render="Label" position="20,60" size="480,20" zPosition="1" foregroundColor="secondFG" font="Regular;19" borderColor="black" noWrap="1" verticalAlignment="center" horizontalAlignment="center">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+  </screen>
+
+  <screen name="PigTemplate">
+    <panel name="SelectionTemplate"/>
+    <ePixmap pixmap="PLi-HD/logos/pli.png" position="20,645" size="120,34" alphaTest="on"/>
+  </screen>
+
+  <screen name="PigLessTemplate">
+    <panel name="BasicTemplate"/>
+    <ePixmap pixmap="PLi-HD/logos/pli.png" position="20,645" size="120,34" alphaTest="on"/>
+  </screen>
+
+  <screen name="MenuTemplate">
+    <panel name="PigTemplate"/>
+    <panel name="ButtonTemplate"/>
+    <widget source="menu" render="Listbox" position="520,70" size="740,600" font="Regular;24" transparent="1" scrollbarMode="showOnDemand">
+      <convert type="TemplatedMultiContent">
+        {"template": [ MultiContentEntryText(pos = (50,10),size = (690,30),flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 0) ],
+	  "fonts": [gFont("Regular",24)],
+	  "itemHeight": 50
+	}
+      </convert>
+    </widget>
+  </screen>
+
+  <!-- VKeyIconPanel -->
+  <!--This conditionally shows "Text" to indicate that the virtual keyboard can be activated by pessin the "Subtitle/Text" button-->
+  <screen name="VKeyIconPanel">
+		<widget source="VKeyIcon" conditional="VKeyIcon" render="Pixmap" pixmap="buttons/key_text.png" zPosition="10" alphaTest="blend" position="20,689" size="35,25">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+  </screen>
+
+  <!-- Button Templates -->
+
+  <screen name="ButtonRed">
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Pixmap" pixmap="PLi-HD/buttons/red.png" position="125,687" size="26,26" zPosition="1" alphaTest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<ePixmap objectTypes="key_red,Button,Label" pixmap="PLi-HD/buttons/red.png" position="125,687" size="26,26" zPosition="1" alphaTest="on"/>
+  </screen>
+
+  <screen name="ButtonGreen">
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Pixmap" pixmap="PLi-HD/buttons/green.png" position="410,687" size="26,26" zPosition="1" alphaTest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<ePixmap objectTypes="key_green,Button,Label" pixmap="PLi-HD/buttons/green.png" position="410,687" size="26,26" zPosition="1" alphaTest="on"/>
+  </screen>
+
+  <screen name="ButtonYellow">
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Pixmap" pixmap="PLi-HD/buttons/yellow.png" position="705,687" size="26,26" zPosition="1" alphaTest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<ePixmap objectTypes="key_yellow,Button,Label" pixmap="PLi-HD/buttons/yellow.png" position="705,687" size="26,26" zPosition="1" alphaTest="on"/>
+  </screen>
+
+  <screen name="ButtonBlue">
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Pixmap" pixmap="PLi-HD/buttons/blue.png" position="990,687" size="26,26" zPosition="1" alphaTest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<ePixmap objectTypes="key_blue,Button,Label" pixmap="PLi-HD/buttons/blue.png" position="990,687" size="26,26" zPosition="1" alphaTest="on"/>
+  </screen>
+
+  <screen name="KeyChannelTemplate">
+    <ePixmap pixmap="PLi-HD/buttons/key_channel.png" alphaTest="blend" position="20,689" size="35,25"/>
+  </screen>
+
+  <screen name="KeyMenuTemplate">
+     <ePixmap pixmap="buttons/key_menu.png" alphaTest="blend" position="55,689" size="35,25"/>
+  </screen>
+
+  <screen name="KeyInfoTemplate">
+    <ePixmap pixmap="buttons/key_info.png" alphaTest="blend" position="90,689" size="35,25"/>
+  </screen>
+
+  <screen name="KeyPrevNextTemplate">
+    <ePixmap pixmap="PLi-HD/buttons/key_prevnext.png" alphaTest="blend" position="90,689" size="35,25"/>
+  </screen>
+
+  <screen name="KeyZeroTemplate">
+    <ePixmap pixmap="buttons/key_0.png" alphaTest="blend" position="20,689" size="35,25"/>
+  </screen>
+
+  <screen name="KeyOkTemplate">
+    <ePixmap pixmap="PLi-HD/buttons/key_ok.png" alphaTest="blend" position="20,689" size="35,25"/>
+  </screen>
+
+  <screen name="KeyOneTemplate">
+    <ePixmap pixmap="buttons/key_1.png" alphaTest="blend" position="20,689" size="35,25"/>
+  </screen>
+
+  <screen name="KeyHelpLTemplate">
+    <ePixmap pixmap="PLi-HD/buttons/key_help.png" alphaTest="blend" position="20,689" size="35,25"/>
+    </screen>
+  <screen name="KeyHelpMTemplate">
+    <ePixmap pixmap="PLi-HD/buttons/key_help.png" alphaTest="blend" position="55,689" size="35,25"/>
+  </screen>
+  <screen name="KeyHelpRTemplate">
+    <ePixmap pixmap="PLi-HD/buttons/key_help.png" alphaTest="blend" position="90,689" size="35,25"/>
+  </screen>
+
+  <screen name="KeyTextTemplate">
+    <ePixmap pixmap="PLi-HD/buttons/key_text.png" alphaTest="blend" position="408,689" size="35,25"/>
+  </screen>
+
+  <screen name="KeyTextTemplateBlue">
+    <ePixmap pixmap="PLi-HD/buttons/key_text.png" alphaTest="blend" position="990,689" size="35,25"/>
+  </screen>
+
+  <screen name="KeyExit">
+    <ePixmap pixmap="PLi-HD/buttons/key_exit.png" alphaTest="blend" position="120,689" size="35,25"/>
+  </screen>
+
+  <screen name="CancelTemplate">
+    <ePixmap pixmap="PLi-HD/buttons/red.png" position="125,687" size="26,26" alphaTest="on"/>
+    <widget name="canceltext" position="165,687" zPosition="2" size="230,28" font="Regular;24" horizontalAlignment="left" backgroundColor="background" transparent="1"/>
+  </screen>
+
+  <screen name="OKTemplate">
+    <ePixmap pixmap="PLi-HD/buttons/green.png" position="420,643" size="26,26" alphaTest="on"/>
+    <widget name="oktext" position="410,687" zPosition="2" size="230,28" font="Regular;24" horizontalAlignment="left" backgroundColor="background" transparent="1"/>
+  </screen>
+
+  <screen name="CancelOKTemplate" >
+    <panel name="CancelTemplate"/>
+    <panel name="OKTemplate"/>
+  </screen>
+
+  <screen name="KeyMenuInfoTemplate">
+    <panel name="KeyMenuTemplate"/>
+    <panel name="KeyInfoTemplate"/>
+  </screen>
+
+  	<screen name="ButtonTemplate">
+		<panel name="ButtonRed"/>
+		<widget objectTypes="key_red,Label,Button" name="key_red" position="165,687" size="230,28" backgroundColor="black" zPosition="1" transparent="1" font="Regular;24" horizontalAlignment="left" />
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" position="165,687" size="230,28" backgroundColor="black" zPosition="1" transparent="1" font="Regular;24" horizontalAlignment="left" />
+
+		<panel name="ButtonGreen"/>
+		<widget objectTypes="key_green,Label,Button" name="key_green" position="450,687" size="230,28" backgroundColor="black" zPosition="1" transparent="1" font="Regular;24" horizontalAlignment="left" />
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" position="450,687" size="230,28" backgroundColor="black" zPosition="1" transparent="1" font="Regular;24" horizontalAlignment="left" />
+
+		<panel name="ButtonYellow"/>
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" position="745,687" size="230,28" backgroundColor="black" zPosition="1" transparent="1" font="Regular;24" horizontalAlignment="left" />
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" position="745,687" size="230,28" backgroundColor="black" zPosition="1" transparent="1" font="Regular;24" horizontalAlignment="left" />
+
+		<panel name="ButtonBlue"/>
+		<widget objectTypes="key_blue,Label,Button" name="key_blue" position="1030,687" size="230,28" backgroundColor="black" zPosition="1" transparent="1" font="Regular;24" horizontalAlignment="left" />
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" position="1030,687" size="230,28" backgroundColor="black" zPosition="1" transparent="1" font="Regular;24" horizontalAlignment="left" />
+	</screen>
+
+  <!-- Hideable buttons -->
+
+  <screen name="KeyPrevNextTemplate_Hideable">
+    <widget name="h_prev" pixmap="buttons/key_prev.png" zPosition="1" alphaTest="blend" position="20,689" size="35,25"/>
+    <widget name="h_next" pixmap="buttons/key_next.png" zPosition="1" alphaTest="blend" position="55,689" size="35,25"/>
+  </screen>
+
+<!-- Infobar Template -->
+
+  <screen name="InfoBarTemplate">
+    <widget source="session.CurrentService" render="Picon" position="20,645" size="100,60" alphaTest="blend" backgroundColor="secondBG" transparent="1" zPosition="1">
+      <convert type="ServiceName">Reference</convert>
+    </widget>
+    <widget source="session.CurrentService" render="ChannelNumber" borderWidth="2" position="180,583" size="100,50" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;26" verticalAlignment="center" horizontalAlignment="left"/>
+    <widget source="session.CurrentService" render="Label" borderWidth="2" position="265,583" size="540,50" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;26" verticalAlignment="center" horizontalAlignment="left">
+      <convert type="ServiceName">Name</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" borderWidth="2" position="20,560" size="360,30" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;16" verticalAlignment="center" horizontalAlignment="left">
+      <convert type="ClockToText">Date</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" borderWidth="2" position="20,583" size="140,50" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;26" verticalAlignment="center" horizontalAlignment="left">
+      <convert type="ClockToText">Format:%H:%M</convert>
+    </widget>
+    <widget source="global.CurrentTime" render="Label" borderWidth="2" position="88,595" size="35,22" backgroundColor="secondBG" noWrap="1" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;18" verticalAlignment="center" horizontalAlignment="left">
+      <convert type="ClockToText">Format::%S</convert>
+    </widget>
+    <widget source="session.RecordState" render="Pixmap" pixmap="PLi-HD/buttons/rec.png" position="140,598" size="20,20" zPosition="3" alphaTest="on">
+      <convert type="ConditionalShowHide"/>
+    </widget>
+    <widget source="session.CurrentService" render="Label" borderWidth="2" position="470,560" size="630,30" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;16" verticalAlignment="center" horizontalAlignment="right">
+      <convert type="CryptoInfo">VerboseInfo</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="180,652" size="70,30" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;24" horizontalAlignment="left">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText">Default;Proportional</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="265,652" size="715,30" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" noWrap="1" font="Regular;24" horizontalAlignment="left">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="960,652" size="140,30" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;24" horizontalAlignment="right">
+      <convert type="EventTime">Remaining</convert>
+      <convert type="RemainingToText">InMinutes</convert>
+    </widget>
+    <widget source="session.Event_Next" render="Label" position="180,682" size="70,30" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;24" horizontalAlignment="left">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText">Default;Proportional</convert>
+    </widget>
+    <widget source="session.Event_Next" render="Label" position="265,682" size="715,30" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" noWrap="1" font="Regular;24" horizontalAlignment="left">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget source="session.Event_Next" render="Label" position="960,682" size="140,30" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;24" horizontalAlignment="right">
+      <convert type="EventTime">Duration</convert>
+      <convert type="ClockToText">InMinutes</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Progress" pixmap="PLi-HD1/infobar/pbar.png" position="180,635" size="920,8" backgroundColor="un33333a" transparent="0" zPosition="2" borderWidth="0">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="PLi-HD/infobar/ico_format_4_3.png" position="1060,598" size="40,21" zPosition="3" alphaTest="on">
+      <convert type="ServiceInfo">IsSDAndNotWidescreen</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="PLi-HD/infobar/ico_format_16_9.png" position="1060,598" size="40,21" zPosition="3" alphaTest="on">
+      <convert type="ServiceInfo">IsSDAndWidescreen</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="PLi-HD/infobar/ico_format_hd.png" position="1060,598" size="40,21" zPosition="4" alphaTest="on">
+      <convert type="ServiceInfo">IsHD</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="PLi-HD/infobar/ico_txt_on.png" position="1023,598" size="33,21" zPosition="2" alphaTest="on">
+      <convert type="ServiceInfo">HasTelext</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="PLi-HD/infobar/ico_dolby_on.png" position="986,598" size="33,21" zPosition="2" alphaTest="on">
+      <convert type="ServiceInfo">IsMultichannel</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="PLi-HD/infobar/ico_crypt_on.png" position="966,598" size="16,21" zPosition="2" alphaTest="on">
+      <convert type="ServiceInfo">IsCrypted</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="PLi-HD/infobar/ico_hbbtv_on.png" position="916,598" size="46,21" zPosition="2" alphaTest="on">
+      <convert type="ServiceInfo">HasHBBTV</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="PLi-HD/infobar/ico_sub_on.png" position="879,598" size="33,21" zPosition="2" alphaTest="on">
+      <convert type="ServiceInfo">SubservicesAvailable</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
+    <widget source="session.Event_Now" render="Pixmap" pixmap="PLi-HD/infobar/ico_pdc.png" position="837,598" size="38,21" zPosition="2" alphaTest="on">
+      <convert type="EventName">Pdc</convert>
+      <convert type="ConditionalShowHide"/>
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" pixmap="PLi-HD/infobar/stream.png" position="812,598" size="21,21" zPosition="3" alphaTest="on">
+      <convert type="ClientsStreaming"/>
+      <convert type="ConditionalShowHide"/>
+    </widget>
+    <widget render="VideoSize" source="session.CurrentService" position="1160,629" size="110,20" backgroundColor="secondBG" font="Regular;19" foregroundColor="foreground" horizontalAlignment="left" transparent="1" zPosition="1"/>
+    <widget source="session.FrontendStatus" render="Label" position="1160,657" size="75,22" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;19">
+      <convert type="FrontendInfo">SNRdB</convert>
+    </widget>
+    <widget source="session.FrontendInfo" render="Label" position="1160,600" size="110,20" borderWidth="1" borderColor="black" zPosition="1" backgroundColor="transpBlack" transparent="1" horizontalAlignment="left" font="Regular;20">
+      <convert type="FrontendInfo">STRING,8,5</convert>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="1160,685" size="110,22" backgroundColor="secondBG" transparent="1" zPosition="1" text="DVB-S" font="Regular;19">
+      <convert type="ServiceOrbitalPosition"/>
+    </widget>
+    <widget source="session.CurrentService" render="Label" position="1160,567" borderWidth="1" borderColor="black" zPosition="2" size="180,20" font="Regular;15" transparent="1" backgroundColor="transpBlack">
+      <convert type="RotorPosition"/>
+    </widget>
+    <!--<ePixmap pixmap="PLi-HD/icons/icon_update_off.png" position="60,35" size="20,20" zPosition="0" alphaTest="blend"/>-->
+  </screen>
+
+</skin>
+
