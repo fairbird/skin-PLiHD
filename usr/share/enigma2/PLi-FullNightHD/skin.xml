@@ -1535,7 +1535,7 @@
 	<screen name="NameserverSetup" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
 		<widget name="config" valueFont="Regular;28" position="780,105" size="1110,646" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/>
-		<widget source="introduction" render="Label" position="780,975" size="1110,34" transparent="1" zPosition="10" font="Regular;30" verticalAlignment="center" horizontalAlignment="center"/>
+		<widget source="introduction" render="Label" position="780,800" size="1110,170" transparent="1" zPosition="10" font="Regular;30" verticalAlignment="center" horizontalAlignment="center"/>
 	</screen>
 
 	<screen name="NetworkAdapterSelection" position="fill" flags="wfNoBorder">
