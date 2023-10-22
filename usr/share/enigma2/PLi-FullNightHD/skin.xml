@@ -111,6 +111,7 @@
 		<!-- PluginList -->
 		<parameter name="ConfigListSlider" value="22,3"/>
 		<parameter name="ChoicelistName" value="68,3,1000,31"/>
+		<parameter name="ChoicelistButtonIcon" value="5,0,50,50"/>
 		<parameter name="ExpandableListIcon" value="0,0,55,38"/>
 		<parameter name="ExpandableListDescr" value="55,2,1000,45"/>
 		<parameter name="VirtualKeyBoard" value="69,68"/>
