@@ -2487,4 +2487,23 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 		<widget name="key" position="780,123" size="1110,40" font="Regular;28" horizontalAlignment="center" transparent="1" verticalAlignment="center" backgroundColor="background"/>
 		<widget name="description" position="30,570" size="720,300" itemHeight="38" font="Regular;30" verticalAlignment="top"/>
 	</screen>
+
+	<!-- MultiBoot Manager -->
+
+	<screen name="MultiBootManager" position="fill" title="Electronic Program Guide Setup" flags="wfNoBorder">
+		<panel name="PigTemplate"/>
+		<panel name="BasicTemplate"/>
+		<panel name="KeyHelpLTemplate"/>
+		<widget name="slotlist" valueFont="Regular;28" position="780,100" size="1110,912" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/>
+		<widget name="description" position="30,570" size="720,300" itemHeight="38" font="Regular;30" verticalAlignment="top"/>
+	</screen>
+
+	<!-- KexecInit -->
+
+	<screen name="KexecInit" position="fill" title="Electronic Program Guide Setup" flags="wfNoBorder">
+		<panel name="PigTemplate"/>
+		<panel name="BasicTemplate"/>
+		<panel name="KeyHelpLTemplate"/>
+		<widget name="description" position="780,100" size="1110,912" itemHeight="38" font="Regular;30" verticalAlignment="top"/>
+	</screen>
 </skin>
