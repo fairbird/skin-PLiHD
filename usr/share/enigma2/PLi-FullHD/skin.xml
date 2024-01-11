@@ -2490,7 +2490,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 
 	<!-- MultiBoot Manager -->
 
-	<screen name="MultiBootManager" position="fill" title="Electronic Program Guide Setup" flags="wfNoBorder">
+	<screen name="MultiBootManager" position="fill" title="MultiBootManager" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
 		<panel name="BasicTemplate"/>
 		<panel name="KeyHelpLTemplate"/>
@@ -2500,7 +2500,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 
 	<!-- KexecInit -->
 
-	<screen name="KexecInit" position="fill" title="Electronic Program Guide Setup" flags="wfNoBorder">
+	<screen name="KexecInit" position="fill" title="KexecInit" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
 		<panel name="BasicTemplate"/>
 		<panel name="KeyHelpLTemplate"/>
