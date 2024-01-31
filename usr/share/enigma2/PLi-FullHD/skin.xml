@@ -165,12 +165,12 @@
 			<pixmap filename="window/bottom_edge.png" pos="bpBottom"/>
 			<pixmap filename="window/bottom_right_corner.png" pos="bpBottomRight"/>
 		</borderset>
-		<borderset name="bsListboxEntry">
+		<!--borderset name="bsListboxEntry">
 			<pixmap filename="border/line.png" pos="bpTop"/>
 			<pixmap filename="border/line.png" pos="bpBottom"/>
 			<pixmap filename="border/vline.png" pos="bpLeft"/>
 			<pixmap filename="border/vline.png" pos="bpRight"/>
-		</borderset>
+		</borderset-->
 	</windowstyle>
 
 	<include filename="skin_templates.xml"/>

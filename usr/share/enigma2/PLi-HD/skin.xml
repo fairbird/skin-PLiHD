@@ -104,10 +104,10 @@
       <pixmap filename="PLi-HD/window/bottom_edge.png" pos="bpBottom"/>
       <pixmap filename="PLi-HD/window/bottom_right_corner.png" pos="bpBottomRight"/>
     </borderset>
-    <borderset name="bsListboxEntry">
+    <!--borderset name="bsListboxEntry">
       <pixmap filename="PLi-HD/border/line.png" pos="bpTop"/>
       <pixmap filename="PLi-HD/border/line.png" pos="bpBottom"/>
-    </borderset>
+    </borderset-->
   </windowstyle>
 
   <include filename="skin_templates.xml"/>
