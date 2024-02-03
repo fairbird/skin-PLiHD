@@ -2549,6 +2549,27 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 		<widget name="description" position="30,570" size="720,300" itemHeight="38" font="Regular;30" verticalAlignment="top"/>
 	</screen>
 
+	<!-- Flash Manager -->
+
+	<screen name="FlashManager" position="fill" title="MultiBoot Manager" flags="wfNoBorder">
+		<panel name="PigTemplate"/>
+		<panel name="BasicTemplate"/>
+		<panel name="KeyHelpLTemplate"/>
+		<widget name="list" valueFont="Regular;28" position="780,100" size="1110,912" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/>
+		<widget name="description" position="30,570" size="720,300" itemHeight="38" font="Regular;30" verticalAlignment="top"/>
+	</screen>
+
+	<!-- Image Backup -->
+
+	<screen name="ImageBackup" position="fill" title="MultiBoot Manager" flags="wfNoBorder">
+		<panel name="PigTemplate"/>
+		<panel name="BasicTemplate"/>
+		<panel name="KeyHelpLTemplate"/>
+		<widget source="options" render="Label" position="780,100" size="1110,60" halign="center" font="Regular;28"/>
+		<widget name="config" valueFont="Regular;28" position="780,168" size="1110,843" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/>
+		<widget name="description" position="30,570" size="720,300" itemHeight="38" font="Regular;30" verticalAlignment="top"/>
+	</screen>
+
 	<!-- MultiBoot Manager -->
 
 	<screen name="MultiBootManager" position="fill" title="MultiBoot Manager" flags="wfNoBorder">
