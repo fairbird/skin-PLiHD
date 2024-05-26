@@ -1904,7 +1904,6 @@
 		<widget name="InfoPixmap" pixmap="icons/input_info.png" position="10,10" size="79,79" alphaTest="blend"/>
 		<widget name="WarningPixmap" pixmap="icons/input_warning.png" position="10,10" size="79,79" alphaTest="blend"/>
 		<widget name="list" position="150,150" size="720,570" itemHeight="38" font="Regular;28"/>
-		<widget name="autoresize" position="0,0" size="0,0" font="Regular;28" noWrap="1"/>
 	<applet type="onLayoutFinish">
 from enigma import eSize, ePoint
 if self.timerRunning:

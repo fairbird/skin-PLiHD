@@ -1652,7 +1652,6 @@
     <widget name="QuestionPixmap" pixmap="icons/input_question.png" position="5,5" size="53,53" alphaTest="blend"/>
     <widget name="InfoPixmap" pixmap="PLi-HD/icons/input_info.png" position="5,5" size="53,53" alphaTest="blend"/>
     <widget name="list" position="100,100" size="480,375"/>
-    <widget name="autoresize" position="0,0" size="0,0" noWrap="1"/>
 	<applet type="onLayoutFinish">
 from enigma import eSize, ePoint
 if self.timerRunning:
