@@ -555,7 +555,8 @@
     <panel name="VKeyIconPanel"/>
     <!--widget name="HelpWindow" pixmap="buttons/vkey_icon.png" position="50,410" zPosition="1" size="1,1" transparent="1" alphaTest="on" /-->
     <widget name="config" position="530,80" size="710,575" scrollbarMode="showOnDemand" selectionPixmap="PLi-HD/buttons/sel.png" />
-    <widget name="description" position="40,380" size="462,200" font="Regular;20" verticalAlignment="top" />
+    <widget name="description" position="85,380" size="417,175" font="Regular;20" verticalAlignment="top"/>
+    <widget name="footnote" position="85,558" size="417,25" font="Regular;20" foregroundColor="red" horizontalAlignment="center" verticalAlignment="center"/>
   </screen>
 
   <!-- Scan setup -->

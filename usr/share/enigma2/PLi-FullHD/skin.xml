@@ -657,7 +657,8 @@
 		<panel name="VKeyIconPanel"/>
 		<widget name="HelpWindow" position="center,650" size="80,0"/>
 		<widget name="config" valueFont="Regular;28" position="780,100" size="1110,912" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/>
-		<widget name="description" position="30,570" size="720,385" font="Regular;30" verticalAlignment="top"/>
+		<widget name="description" position="30,570" size="720,360" font="Regular;30" verticalAlignment="top"/>
+		<widget name="footnote" position="30,930" size="720,40" font="Regular;30" foregroundColor="red" horizontalAlignment="center" verticalAlignment="center"/>
 	</screen>
 
 	<!-- Scan setup -->
