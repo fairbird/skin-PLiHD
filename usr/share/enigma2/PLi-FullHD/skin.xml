@@ -1446,7 +1446,7 @@
 	<screen name="DefaultWizard" position="fill" flags="wfNoBorder">
 		<panel name="WizardMarginsTemplate"/>
 		<panel name="WizardPictureLangTemplate"/>
-		<panel name="RemoteControlTemplate"/>
+		<!--panel name="RemoteControlTemplate"/-->
 		<panel position="left" size="10,*"/>
 		<panel position="right" size="10,*"/>
 		<panel position="fill">
@@ -1468,7 +1468,7 @@
 	<screen name="VideoWizard" position="fill" flags="wfNoBorder" >
 		<panel name="WizardMarginsTemplate"/>
 		<panel name="WizardPictureLangTemplate"/>
-		<panel name="RemoteControlTemplate"/>
+		<!--panel name="RemoteControlTemplate"/-->
 		<panel position="left" size="10,*"/>
 		<panel position="right" size="10,*"/>
 		<panel position="fill">
@@ -1492,7 +1492,7 @@
 	<!-- Language wizard -->
 	<screen name="LanguageWizard" position="fill" flags="wfNoBorder">
 		<panel name="WizardMarginsTemplate"/>
-		<panel name="RemoteControlTemplate"/>
+		<!--panel name="RemoteControlTemplate"/-->
 		<panel position="left" size="10,*"/>
 		<panel position="right" size="10,*"/>
 		<panel position="fill">
@@ -1514,7 +1514,7 @@
 	<screen name="InstallWizardOpkgUpdater" position="fill" flags="wfNoBorder">
 		<panel name="WizardMarginsTemplate"/>
 		<panel position="top" size="*,100"/>
-		<panel name="RemoteControlTemplate"/>
+		<!--panel name="RemoteControlTemplate"/-->
 		<panel position="left" size="10,*"/>
 		<panel position="right" size="10,*"/>
 		<widget source="statusbar" render="Label" position="fill" zPosition="10" horizontalAlignment="center" verticalAlignment="center" font="Regular;34" transparent="1"/>

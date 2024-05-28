@@ -1427,7 +1427,7 @@
 	<screen name="DefaultWizard" position="fill" flags="wfNoBorder">
 		<panel name="WizardMarginsTemplate"/>
 		<panel name="WizardPictureLangTemplate"/>
-		<panel name="RemoteControlTemplate"/>
+		<!--panel name="RemoteControlTemplate"/-->
 		<panel name="wizard_rc_templateNew"/>
 		<panel position="left" size="10,*"/>
 		<panel position="right" size="10,*"/>
@@ -1450,7 +1450,7 @@
 	<screen name="VideoWizard" position="fill" flags="wfNoBorder" >
 		<panel name="WizardMarginsTemplate"/>
 		<panel name="WizardPictureLangTemplate"/>
-		<panel name="RemoteControlTemplate"/>
+		<!--panel name="RemoteControlTemplate"/-->
 		<panel name="wizard_rc_templateNew"/>
 		<panel position="left" size="10,*"/>
 		<panel position="right" size="10,*"/>
@@ -1475,7 +1475,7 @@
 	<!-- Language wizard -->
 	<screen name="LanguageWizard" position="fill" flags="wfNoBorder">
 		<panel name="WizardMarginsTemplate"/>
-		<panel name="RemoteControlTemplate"/>
+		<!--panel name="RemoteControlTemplate"/-->
 		<panel name="wizard_rc_templateNew"/>
 		<panel position="left" size="10,*"/>
 		<panel position="right" size="10,*"/>
@@ -1498,7 +1498,7 @@
 	<screen name="InstallWizardOpkgUpdater" position="fill" flags="wfNoBorder">
 		<panel name="WizardMarginsTemplate"/>
 		<panel position="top" size="*,100"/>
-		<panel name="RemoteControlTemplate"/>
+		<!--panel name="RemoteControlTemplate"/-->
 		<panel name="wizard_rc_templateNew"/>
 		<panel position="left" size="10,*"/>
 		<panel position="right" size="10,*"/>
