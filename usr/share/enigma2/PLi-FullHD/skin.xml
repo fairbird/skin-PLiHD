@@ -1212,6 +1212,34 @@
 		<widget name="list" position="780,100" size="1110,912" zPosition="3" transparent="0" scrollbarMode="showOnDemand"/>
 	</screen>
 
+	<screen name="PackageAction" title="Downloadable plugins" position="fill" flags="wfNoBorder">
+		<panel name="PigTemplate"/>	
+		<widget source="plugins" render="Listbox" position="780,100" size="1110,912" scrollbarMode="showOnDemand" zPosition="3">
+			<convert type="TemplatedMultiContent">
+				{
+				"template":
+					[
+					MultiContentEntryPixmapAlphaBlend(pos=(5, 0), size=(60, 50), png=6, flags=BT_SCALE),
+					MultiContentEntryText(pos=(70, 0), size=(1110, 50), font=0, flags=RT_VALIGN_CENTER, text=2),
+					MultiContentEntryText(pos=(70, 2), size=(650, 35), font=1, flags=RT_VALIGN_CENTER, text=3),
+					MultiContentEntryText(pos=(650, 2), size=(400, 35), font=1, flags=RT_VALIGN_CENTER, text=5),
+					MultiContentEntryText(pos=(70, 35), size=(850, 25), font=2, flags=RT_VALIGN_CENTER, text=4, color=0x00b0b0b0),
+					MultiContentEntryPixmapAlphaBlend(pos=(1050, 1), size=(48, 48), png=7, flags=BT_SCALE)
+					],
+				"fonts": [parseFont("Regular;30"), parseFont("Regular;30"), parseFont("Regular;25")],
+				"itemHeight": 70
+				}
+			</convert>
+		</widget>
+		<widget name="quickselect" position="0,0" size="e,500" font="Regular;100" foregroundColor="#00fff000" halign="center" transparent="1" valign="center" zPosition="+1" />
+		<widget name="description" position="250,700" size="1110,75" font="Regular;30" valign="center" />
+	</screen>
+
+	<screen name="PackageActionLog" title="Downloadable plugins" position="fill" flags="wfNoBorder">
+		<panel name="PigTemplate"/>	
+		<widget name="log" position="780,100" size="1110,912" font="Regular;28" />
+	</screen>
+
 	<screen name="FileBrowser" title="DVD File Browser" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
 		<widget name="filelist" position="780,100" size="1110,912" scrollbarMode="showOnDemand"/>
