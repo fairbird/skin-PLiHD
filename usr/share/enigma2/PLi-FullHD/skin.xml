@@ -1240,6 +1240,32 @@
 		<widget name="log" position="780,100" size="1110,912" font="Regular;28" />
 	</screen>
 
+	<screen name="SoftwareUpdate" title="Software Update" position="fill" flags="wfNoBorder">
+		<panel name="PigTemplate"/>	
+		<widget name="feedmessage" position="780,100" size="1110,70" font="Regular;28" transparent="1" verticalAlignment="center"/>
+		<widget name="activity" position="780,60" size="1110,10"/>
+		<widget source="list" render="Listbox" position="780,175" size="1110,680" scrollbarMode="showOnDemand">
+			<templates>
+				<template name="Default" fonts="Regular;28,Regular;24" itemHeight="70" itemWidth="750">
+					<mode name="default">
+						<text index="Package" position="10,0" size="800,30" font="0" horizontalAlignment="left" verticalAlignment="center" />
+						<text index="Versions" position="30,35" size="900,30" font="1" horizontalAlignment="left" verticalAlignment="center" />
+						<pixmap index="UpgradeIcon" position="1050,10" size="48,48" alpha="blend" scale="centerScaled" />
+						<pixmap index="Divider" position="0,68" size="1110,2" alpha="blend" scale="centerScaled" />
+					</mode>
+				</template>
+			</templates>
+		</widget>
+		<widget name="package_text" position="200,700" size="320,35" font="Regular;33" transparent="1" verticalAlignment="center"/>
+  		<widget name="package_count" position="430,700" size="90,35" font="Regular;33" horizontalAlignment="right" transparent="1" verticalAlignment="center"/>
+	</screen>
+
+	<screen name="RunSoftwareUpdate" title="Run Software Update" position="fill" flags="wfNoBorder">
+		<panel name="PigTemplate"/>
+		<widget name="update" position="780,100" size="1110,890" font="Regular;28" halign="center" transparent="1" valign="center" />
+		<widget name="activity" position="780,1002" size="1110,5"/>
+	</screen>
+
 	<screen name="FileBrowser" title="DVD File Browser" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
 		<widget name="filelist" position="780,100" size="1110,912" scrollbarMode="showOnDemand"/>
