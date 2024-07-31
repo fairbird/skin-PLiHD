@@ -1488,7 +1488,7 @@
 		<panel position="right" size="10,*"/>
 		<panel position="fill">
 			<widget name="text" position="top" size="*,400" font="Regular;34" verticalAlignment="center"/>
-			<widget position="bottom" size="*,50"/>
+			<!--widget position="bottom" size="*,50"/-->
 			<panel position="fill" layout="stack">
 				<widget source="list" render="Listbox" position="fill" scrollbarMode="showOnDemand">
 					<convert type="TemplatedMultiContent">
