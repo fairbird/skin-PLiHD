@@ -17,7 +17,7 @@
 		<font name="Console" filename="tuxtxt.ttf" scale="100"/>
 		<font name="Fixed" filename="andale.ttf" scale="100"/>
 		<font name="DejaVuSans" filename="DejaVuSans.ttf" scale="100"/>
-		<alias name="ChoiceList" font="Regular" size="28" height="38"/>
+		<alias name="ChoiceList" font="Regular" size="30" height="38"/>
 		<alias name="TextNormal" font="Regular" size="28" height="38"/>
 		<alias name="ChoiceBoxDescription" font="Regular" size="22" height="25"/>
 		<alias name="FileList" font="Regular" size="28" height="38"/>
@@ -112,9 +112,12 @@
 		<!-- PluginList -->
 		<parameter name="ConfigListSeperator" value="350"/>
 		<parameter name="ConfigListSlider" value="22,3"/>
-		<parameter name="ChoicelistName" value="68,3,1000,31"/>
+		<parameter name="ChoicelistName" value="68,2,1000,35"/>
+		<parameter name="ChoicelistIcon" value="5,0,50,50"/>
 		<parameter name="ChoicelistButtonIcon" value="5,0,50,50"/>
 		<parameter name="ChoicelistNameSingle" value="5,0,1275,38"/>
+		<parameter name="ChoicelistIconVerticalline" value="5,0,50,50"/>
+		<parameter name="ChoicelistIconExpanded" value="5,0,45,50"/>
 		<parameter name="ExpandableListIcon" value="0,0,55,38"/>
 		<parameter name="ExpandableListDescr" value="55,2,1000,45"/>
 		<parameter name="VirtualKeyBoard" value="69,68"/>
