@@ -443,18 +443,15 @@
 	</screen>
 
 	<!-- Channel, horizontal (Full Screen) -->
-	<screen name="ChannelSelectionFull" label="Full Screen" base="ChannelSelection" position="fill" title="Channel Selection" flags="wfNoBorder" backgroundColor="transparent">
+	<screen name="ChannelSelectionFull" label="Full Screen" base="ChannelSelection" position="fill" title="Channel Selection" flags="wfNoBorder" backgroundColor="#2d101214">
 		<panel name="BasicTemplate"/>
 		<panel name="KeyMenuInfoTemplate"/>		
-		<widget name="list" position="0,85" size="1920,935" itemHeight="45" transparent="0" serviceNumberFont="Regular;34"
-			scrollbarMode="showOnDemand" serviceInfoFont="Regular;32" serviceNameFont="Regular;34" serviceItemHeight="45"
-			picServiceEventProgressbar="window/progress.png" progressbarHeight="15" progressBarWidth="60"
-                        progressPercentWidth="80" colorEventProgressbarBorder="un33333a" fieldMargins="15" nonplayableMargins="15"
+		<widget name="list" position="5,100" size="1920,935" transparent="1"
 			colorEventProgressbarBorderSelected="darkgrey" colorServiceDescription="yellowsoft"
 			colorServiceRecorded="#00E51400" colorServicePseudoRecorded="#000000CD" colorServiceStreamed="#00C3461B"
-			foregroundColorServiceNotAvail="#656565" backgroundColorMarked="#656565" colorServiceDescriptionFallback="yellowsoft"
+			backgroundColorMarked="#656565" colorServiceDescriptionFallback="yellowsoft"
 			colorServiceDescriptionSelectedFallback="yellowsoft" colorFallbackItem="#aaaaaa" colorServiceSelectedFallback="yellowsoft"
-			backgroundColorSelected="#1A27408B" backgroundColor="#2d101214" />
+			backgroundColorSelected="#1A27408B"/>
 	</screen>
 
 	<!-- Simple channelselection -->

@@ -1,5 +1,5 @@
 <templates>
-	<template component="serviceList" name="Default" screens="ChannelSelectionDefault" fonts="Regular;30,Regular;27,Regular;23,Regular;18">
+	<template component="serviceList" name="Default" screens="ChannelSelectionDefault" fonts="Regular;30,Regular;27,Regular;23,Regular;25">
 		<mode name="services" itemHeight="38" foregroundColorFallback="#00555555" foregroundColorServiceNotAvail="#00555555" recordColor="red" streamColor="orange" pseudoColor="yellow">
 			<panel position="15,0" size="e-30,38" layout="horizontal" spacing="15">
 				<pixmap index="Picon" position="left,1" size="60,35" alpha="blend" scale="centerScaled"/>
@@ -35,7 +35,7 @@
 		</mode>
 	</template>
 
-	<template component="serviceList" name="2 Lines" screens="ChannelSelectionDefault" fonts="Regular;30,Regular;27,Regular;23,Regular;18">
+	<template component="serviceList" name="2 Lines" screens="ChannelSelectionDefault" fonts="Regular;30,Regular;27,Regular;23,Regular;25">
 		<mode name="services" itemHeight="38" foregroundColorFallback="#00555555" foregroundColorServiceNotAvail="#00555555" recordColor="red" streamColor="orange" pseudoColor="yellow">
 			<panel position="15,0" size="e-30,38" layout="horizontal" spacing="15">
 				<pixmap index="Picon" position="left,1" size="60,35" alpha="blend" scale="centerScaled"/>
@@ -46,7 +46,7 @@
 				<progress index="Progress" position="right,9" size="75,11" borderWidth="1" foregroundGradient="green,yellow,red,horizontal" />
 			</panel>
 		</mode>
-		<mode name="other" foregroundColor="white" itemHeight="38"  foregroundColorMaked="blue" backgroundColorMarked="black" foregroundColorMakedAndSelected="green" backgroundColorMarkedAndSelected="black" recordColor="red" streamColor="orange" pseudoColor="yellow">
+		<mode name="other" foregroundColor="white" itemHeight="38" foregroundColorMaked="blue" backgroundColorMarked="black" foregroundColorMakedAndSelected="green" backgroundColorMarkedAndSelected="black" recordColor="red" streamColor="orange" pseudoColor="yellow">
 			<panel position="15,0" size="e-30,38" layout="horizontal" spacing="15">
 				<pixmap index="MarkerImage" position="left,1" size="60,35" alpha="blend" scale="centerScaled"/>
 				<pixmap index="FolderImage" position="left,1" size="60,35" alpha="blend" scale="centerScaled"/>
@@ -71,7 +71,7 @@
 		</mode>
 	</template>
 
-	<template component="serviceList" name="Grid" screens="ChannelSelectionGrid" fonts="Regular;30,Regular;27,Regular;23,Regular;18">
+	<template component="serviceList" name="Grid" screens="ChannelSelectionGrid" fonts="Regular;30,Regular;27,Regular;23,Regular;25">
 		<mode name="services" itemWidth="1050" itemHeight="45" foregroundColorFallback="#00555555" foregroundColorServiceNotAvail="#00555555" foregroundColor="white" foregroundColorMaked="blue" backgroundColorMarked="black" foregroundColorMakedAndSelected="green" backgroundColorMarkedAndSelected="black" recordColor="red" streamColor="orange" pseudoColor="yellow">
 			<pixmap index="Picon" position="23,2" size="60,35" alpha="blend" scale="centerScaled"/>
 			<text index="ServiceName" position="98,0" size="225,38" autoFit="Title1" font="1" verticalAlignment="center" wrap="noWrap" />
