@@ -381,13 +381,14 @@
 	<screen name="ChannelSelectionDefault" label="Default" base="ChannelSelection" position="fill" title="Channel Selection" flags="wfNoBorder" backgroundColor="transparent">
 		<panel name="SelectionTemplate"/>
 		<panel name="KeyMenuInfoTemplate"/>
-		<widget name="list" position="780,108" size="1110,900" itemHeight="45" transparent="1" serviceNumberFont="Regular;34"
+		<widget name="list" position="780,105" size="1110,1000" itemHeight="45" transparent="1" serviceNumberFont="Regular;34"
 			scrollbarMode="showOnDemand" serviceInfoFont="Regular;32" serviceNameFont="Regular;34" serviceItemHeight="45"
 			picServiceEventProgressbar="window/progress.png" progressbarHeight="15" progressBarWidth="60" backgroundColorSelected="#1A27408B"
                         progressPercentWidth="80" colorEventProgressbarBorder="un33333a" fieldMargins="15" nonplayableMargins="15"
 			colorEventProgressbarBorderSelected="darkgrey" colorServiceDescription="yellowsoft" progressbarBorderWidth="0"
 			foregroundColorServiceNotAvail="#656565" backgroundColorMarked="#656565" colorServiceDescriptionFallback="yellowsoft"
-			colorServiceDescriptionSelectedFallback="yellowsoft" colorFallbackItem="#aaaaaa" colorServiceSelectedFallback="yellowsoft"/>
+			colorServiceDescriptionSelectedFallback="yellowsoft" colorFallbackItem="#aaaaaa" colorServiceSelectedFallback="yellowsoft"
+			itemCornerRadius="20" itemSpacing="2,2" />
 		<widget source="ServiceEvent" render="Label" position="30,528" size="720,30" foregroundColor="transponderinfo" font="Regular;26" verticalAlignment="center" horizontalAlignment="center" transparent="1" zPosition="1">
 			<convert type="TransponderInfo"/>
 		</widget>
@@ -414,13 +415,13 @@
 	<!-- Channel, horizontal (Full Screen) -->
 	<screen name="ChannelSelectionFull" label="Full Screen" base="ChannelSelection" position="fill" title="Channel Selection" flags="wfNoBorder" backgroundColor="#2d101214">
 		<panel name="BasicTemplate"/>
-		<panel name="KeyMenuInfoTemplate"/>		
-		<widget name="list" position="5,100" size="1920,935" transparent="1" itemCornerRadius="20"
+		<panel name="KeyMenuInfoTemplate"/>
+		<widget name="list" position="95,95" size="1920,1200" transparent="1" itemCornerRadius="20" itemSpacing="15,10"
+			itemGradient="#2d101214,#2d101214,horizontal" itemGradientSelected="#1A27408B,#1A27408B,horizontal"
 			colorEventProgressbarBorderSelected="darkgrey" colorServiceDescription="yellowsoft"
 			colorServiceRecorded="#00E51400" colorServicePseudoRecorded="#000000CD" colorServiceStreamed="#00C3461B"
 			backgroundColorMarked="#656565" colorServiceDescriptionFallback="yellowsoft"
-			colorServiceDescriptionSelectedFallback="yellowsoft" colorFallbackItem="#aaaaaa" colorServiceSelectedFallback="yellowsoft"
-			backgroundColorSelected="#1A27408B"/>
+			colorServiceDescriptionSelectedFallback="yellowsoft" colorFallbackItem="#aaaaaa" colorServiceSelectedFallback="yellowsoft"/>
 	</screen>
 
 	<!-- Simple channelselection -->
