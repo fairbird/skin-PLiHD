@@ -1595,6 +1595,20 @@
 				</panel>
 			</panel>
 	</screen>
+	<!-- Network wizard -->
+	<screen name="NetworkWizard" position="fill" flags="wfNoBorder" >
+		<panel name="WizardMarginsTemplate"/>
+		<panel name="WizardPictureLangTemplate"/>
+		<!--panel name="RemoteControlTemplate"/-->
+		<panel name="wizard_rc_templateNew"/>
+		<panel position="left" size="10,*"/>
+		<panel position="right" size="10,*"/>
+		<widget name="text" position="150,140" size="730,250" font="Regular;34" foregroundColor="window-fg" backgroundColor="black" transparent="1"/>
+		<widget source="list" render="Listbox" position="150,400" size="1100,220" itemHeight="40" font="Regular;34" transparent="1" backgroundColor="black" scrollbarMode="showOnDemand">
+			<convert type="StringList"/>
+		</widget>
+		<widget name="config" position="150,400" size="1100,220" itemHeight="40" font="Regular;34" transparent="1" backgroundColor="black" scrollbarMode="showOnDemand"/>
+	</screen>
 	<!-- Language wizard -->
 	<screen name="LanguageWizard" position="fill" flags="wfNoBorder">
 		<panel name="WizardMarginsTemplate"/>
