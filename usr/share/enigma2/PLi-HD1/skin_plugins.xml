@@ -48,6 +48,7 @@
     <panel name="ButtonTemplate_RGYB"/>
     <widget name="text" position="520,70" size="740,600" zPosition="1" font="Regular;20" verticalAlignment="center" horizontalAlignment="center"/>
     <widget name="timerlist" position="520,70" size="740,600" itemHeight="75" zPosition="2" scrollbarMode="showOnDemand"/>
+    <widget name="description" position="20,365" size="480,253" zPosition="1" font="Regular;20" halign="block"/>
   </screen>
 
   <screen name="RemoteTimerEPGList" position="fill" flags="wfNoBorder">
