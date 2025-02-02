@@ -427,7 +427,7 @@
 	<screen name="ChannelSelectionFull" label="Full Screen" base="ChannelSelection" position="fill" title="Channel Selection" flags="wfNoBorder" backgroundColor="#2d101214">
 		<panel name="BasicTemplate"/>
 		<panel name="KeyMenuInfoTemplate"/>
-		<widget name="list" position="95,95" size="1920,1200" transparent="1" itemCornerRadius="20" itemSpacing="15,10"
+		<widget name="list" position="50,95" size="1880,1200" transparent="1" itemCornerRadius="20" itemSpacing="15,10"
 			itemGradient="#2d101214,#2d101214,horizontal" itemGradientSelected="#1A27408B,#1A27408B,horizontal"
 			colorEventProgressbarBorderSelected="darkgrey" colorServiceDescription="yellowsoft"
 			colorServiceRecorded="#00E51400" colorServicePseudoRecorded="#000000CD" colorServiceStreamed="#00C3461B"
