@@ -1903,7 +1903,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
     <panel name="PigTemplate"/>
     <widget name="prompt" position="580,110" size="630,25" font="Regular;20" noWrap="1" transparent="1" />
     <ePixmap pixmap="buttons/vkey_text.png" position="575,140" size="640,50" alphaTest="on" zPosition="-4" />
-    <widget name="text" position="580,150" size="630,33" font="Regular;28" horizontalAlignment="right" noWrap="1" transparent="1" />
+    <widget name="text" position="580,150" size="630,33" font="Regular;28" noWrap="1" transparent="1" />
     <widget name="list" position="580,200" size="630,225" backgroundColor="#001c2c5c" foregroundColor="window-fg" selection="0" transparent="1" />
     <widget name="locale" position="580,440" size="570,25" font="Regular;20" transparent="1" />
     <widget name="mode" position="1150,440" size="60,25" font="Regular;20" horizontalAlignment="right" transparent="1" verticalAlignment="center" />

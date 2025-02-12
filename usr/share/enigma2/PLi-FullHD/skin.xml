@@ -2387,7 +2387,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 		<ePixmap pixmap="buttons/key_help.png" alphaTest="blend" position="134,1032" size="52,38"/>
 		<widget name="prompt" position="868,180" size="954,35" font="Regular;30" noWrap="1" transparent="1"/>
 		<ePixmap pixmap="buttons/vkey_text.png" position="856,228" size="974,70" alphaTest="blend" zPosition="-4"/>
-		<widget name="text" position="868,240" size="954,47" font="Regular;40" horizontalAlignment="right" noWrap="1" transparent="1"/>
+		<widget name="text" position="868,240" size="954,47" font="Regular;40" noWrap="1" transparent="1"/>
 		<widget name="list" position="868,305" size="952,340" backgroundColor="#001c2c5c" foregroundColor="window-fg" selection="0" transparent="1"/>
 		<ePixmap pixmap="border/vsmallshadowline.png" position="1820,305" size="2,342" zPosition="2"/>
 		<ePixmap pixmap="border/smallshadowline.png" position="868,645" size="952,2" zPosition="2"/>
