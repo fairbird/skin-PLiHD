@@ -62,7 +62,7 @@
 	<screen name="SelectionTemplate">
 		<panel name="BasicTemplate"/>
 		<widget source="session.VideoPicture" render="Pig" position="30,120" size="720,405" backgroundColor="transparent" zPosition="1"/>
-		<widget source="session.CurrentService" render="Label" position="30,90" size="720,32" zPosition="1" foregroundColor="secondFG" font="Regular;25" borderColor="black" noWrap="1" verticalAlignment="center" horizontalAlignment="center">
+		<widget source="session.CurrentService" render="Label" position="30,125" size="720,30" backgroundColor="transparent" zPosition="1" foregroundColor="foreground" borderWidth="2" font="Regular;28" borderColor="black" verticalAlignment="center" horizontalAlignment="center">
 			<convert type="ServiceName">Name</convert>
 		</widget>
 	</screen>
