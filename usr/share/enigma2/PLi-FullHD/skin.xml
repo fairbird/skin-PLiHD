@@ -2683,4 +2683,27 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 		<panel name="KeyHelpLTemplate"/>
 		<widget name="description" position="780,100" size="1110,912" itemHeight="38" font="Regular;30" verticalAlignment="top"/>
 	</screen>
+
+	<!--Log Manager -->
+
+	<screen name="LogManager" title="LogManager" position="fill" flags="wfNoBorder">
+		<panel name="PigTemplate"/>
+		<panel name="BasicTemplate"/>
+		<widget name="list" valueFont="Regular;28" position="780,100" size="1110,912" itemHeight="38" font="Regular;30" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<!--Log Manager Fb -->
+
+	<screen name="LogManagerFb" title="LogManagerFb" position="fill" flags="wfNoBorder">
+		<panel name="PigTemplate"/>
+		<panel name="BasicTemplate"/>
+		<widget name="list" valueFont="Regular;28" position="780,100" size="1110,912" itemHeight="38" font="Regular;30" scrollbarMode="showOnDemand"/>
+	</screen>
+
+	<!--Log Manager View Log -->
+	
+	<screen name="LogManagerViewLog" title="LogManagerViewLog" position="fill" flags="wfNoBorder">
+		<panel name="BasicTemplate"/>
+		<widget name="list" position="30,100" size="1860,912" itemHeight="38" font="Regular;30" transparent="1" foregroundColor="white" scrollbarMode="showOnDemand"/>
+	</screen>
 </skin>
