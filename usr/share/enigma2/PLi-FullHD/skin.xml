@@ -2336,6 +2336,49 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 		<panel name="PigTemplate"/>
 		<widget name="AboutScrollLabel" font="Regular;28" position="780,100" size="1110,912" zPosition="2" split="1" dividechar=":" colposition="0"/>
 	</screen>
+
+	<!--About/Info Screens-->
+	<screen name="AboutOE" position="fill" flags="wfNoBorder">
+		<panel name="PigTemplate"/>
+		<widget name="AboutScrollLabel" font="Regular;28" position="780,100" size="1110,912" zPosition="2" split="1" dividechar=":" colposition="0"/>
+	</screen>
+
+	<screen name="PictureInformation" position="fill" flags="wfNoBorder">
+		<widget name="name" position="810,385" size="415,220" font="Regular;28" conditional="description" halign="center" valign="center" transparent="1"/>
+		<widget name="image" position="70,100" size="700,480" alphatest="blend" scaleFlags="scaleCenter" transparent="1" />
+	</screen>
+
+	<screen name="information_common">
+		<panel name="PigTemplate"/>
+		<widget name="information" font="Regular;28" position="780,100" size="1110,912" conditional="information" halign="left" scrollbarWidth="3" scrollbarBorderWidth="0" transparent="1" colPosition="450" leftColAlign="left" rightColAlign="left" split="1" />
+	</screen>
+
+	<screen name="information_common2">
+		<panel name="BasicTemplate"/>
+		<panel name="ButtonTemplate"/>
+		<widget name="information" font="Regular;30" position="30,100" size="1860,912" conditional="information" halign="left" scrollbarWidth="3" scrollbarBorderWidth="0" transparent="1" />
+	</screen>
+
+	<screen name="DistributionInformation" position="fill" flags="wfNoBorder">
+		<panel name="information_common" />
+	</screen>
+
+	<screen name="Information" position="fill" flags="wfNoBorder">
+		<panel name="information_common" />
+	</screen>
+
+	<screen name="SystemInformation" position="fill" flags="wfNoBorder">
+		<panel name="information_common2" />
+	</screen>
+
+	<screen name="CommitInformation" position="fill" flags="wfNoBorder">
+		<panel name="information_common2" />
+	</screen>
+
+	<screen name="DebugInformation" position="fill" flags="wfNoBorder">
+		<panel name="information_common2" />
+	</screen>
+
 	<!-- Memory Info -->
 	<screen name="MemoryInfo" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
