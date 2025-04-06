@@ -74,12 +74,33 @@
 	<screen name="MenuTemplate">
 		<panel name="PigTemplate"/>
 		<panel name="ButtonTemplate"/>
-		<widget source="menu" render="Listbox" position="780,105" size="1110,900" font="Regular;36" transparent="1" scrollbarMode="showOnDemand">
+		<widget source="menu" render="Listbox" position="780,105" size="1110,900" font="Regular;36" transparent="1" scrollbarMode="showOnDemand" scrollbarRadius="5" itemCornerRadius="12">
 			<convert type="TemplatedMultiContent">
-				{"template": [ MultiContentEntryText(pos = (75,15),size = (1035,45),flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 0) ],
-		"fonts": [gFont("Regular",36)],
-		"itemHeight": 75
-	}
+				{"templates":
+					{"default": (75,[
+						MultiContentEntryText(pos = (30, 5), size = (1035,60), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 0)
+						]),
+					"text": (75,[
+						MultiContentEntryText(pos = (30, 5), size = (1035,60), flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3)
+						]),
+					"number": (75,[
+						MultiContentEntryText(pos = (20, 5), size = (40, 60), font = 1, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 2),
+						MultiContentEntryText(pos = (80, 5), size = (1035,60), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3),
+						]),
+					"image": (75,[
+						MultiContentEntryPixmapAlphaBlend(pos = (25, 7), size = (56, 56), png = 1, flags = BT_SCALE | BT_KEEP_ASPECT_RATIO),
+						MultiContentEntryText(pos = (113, 5), size = (1035,60), font = 1, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3),
+						]),
+					"both": (75,[
+						MultiContentEntryPixmapAlphaBlend(pos = (25, 7), size = (56, 56), png = 1, flags = BT_SCALE | BT_KEEP_ASPECT_RATIO),
+						MultiContentEntryText(pos = (95, 5), size = (40, 60), font = 2, flags = RT_HALIGN_CENTER | RT_VALIGN_CENTER, text = 2),
+						MultiContentEntryText(pos = (150, 5), size = (1035,60), font = 2, flags = RT_HALIGN_LEFT | RT_VALIGN_CENTER, text = 3),
+						])
+					},
+				"fonts": [gFont("Regular", 36),gFont("Regular", 36),gFont("Regular", 36)],
+				"itemHeight": 75,
+				"scrollbarMode": "showOnDemand"
+				}
 			</convert>
 		</widget>
 	</screen>
