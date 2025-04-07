@@ -74,6 +74,7 @@
 	<screen name="MenuTemplate">
 		<panel name="PigTemplate"/>
 		<panel name="ButtonTemplate"/>
+		<widget name="menuimage" position="200,620" size="265,265" zPosition="2" alphatest="on" scaleFlags="scaleCenter" transparent="1" />
 		<widget source="menu" render="Listbox" position="780,105" size="1110,900" font="Regular;36" transparent="1" scrollbarMode="showOnDemand" scrollbarRadius="5" itemCornerRadius="12">
 			<convert type="TemplatedMultiContent">
 				{"templates":
