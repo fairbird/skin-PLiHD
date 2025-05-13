@@ -3036,7 +3036,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + 
 	<menu key="DisneyPlugin" image="icons_Menu/DisneyPlugin.png" />
 	<menu key="iptv_config" image="icons_Menu/iptv_config.png" />
 	<menu key="JediMakerXtream" image="icons_Menu/JediMakerXtream.png" />
-	<menu key="BouquetMakerXtream" image="icons_Menu/JediMakerXtream.png" />
+	<menu key="BouquetMakerXtream" image="icons_Menu/BouquetMakerXtream.png" />
 	<menu key="NetflixPlugin" image="icons_Menu/NetflixPlugin.png" />
 	<menu key="XKlass" image="icons_Menu/XKlass.png" />
 	<menu key="NetflixPlugin" image="icons_Menu/NetflixPlugin.png" />
