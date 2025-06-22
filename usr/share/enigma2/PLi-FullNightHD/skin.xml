@@ -677,7 +677,7 @@
 		<panel name="MenuTemplate"/>
 	</screen>
 
-	<!--Setup Configs -->
+	<!-- Setup Configs -->
 
 	<screen name="Setup" title="Setup" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
@@ -688,7 +688,7 @@
 		<widget name="footnote" position="30,930" size="720,40" font="Regular;30" foregroundColor="red" horizontalAlignment="center" verticalAlignment="center"/>
 	</screen>
 
-	<!--NetworkPassword Configs -->
+	<!-- NetworkPassword Configs -->
 
 	<screen name="NetworkPassword" title="NetworkPassword" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
@@ -697,6 +697,14 @@
 		<widget name="config" valueFont="Regular;28" position="780,100" size="1110,912" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/>
 		<widget name="description" position="30,570" size="720,360" font="Regular;30" verticalAlignment="top"/>
 		<widget name="footnote" position="30,930" size="720,40" font="Regular;30" foregroundColor="red" horizontalAlignment="center" verticalAlignment="center"/>
+	</screen>
+
+	<!-- NetworkLogScreen -->
+
+	<screen name="NetworkLogScreen" title="NetworkLogScreen" position="fill" flags="wfNoBorder">
+		<panel name="PigTemplate"/>
+		<panel name="VKeyIconPanel"/>
+		<widget name="infotext" position="780,100" size="1110,912" font="Regular;28" scrollbarMode="showOnDemand"/>
 	</screen>
 
 	<!-- Scan setup -->
