@@ -1542,9 +1542,7 @@
   <screen name="MessageBox" title="Message" position="fill" flags="wfNoBorder">
     <panel name="PigTemplate"/>
     <widget name="text" position="650,110" size="550,500" font="Regular;22" />
-    <widget name="ErrorPixmap" pixmap="icons/input_error.png" position="590,110" size="53,53" alphaTest="on" />
-    <widget name="QuestionPixmap" pixmap="icons/input_question.png" position="590,110" size="53,53" alphaTest="on" />
-    <widget name="InfoPixmap" pixmap="PLi-HD/icons/input_info.png" position="590,110" size="53,53" alphaTest="on" />
+    <widget name="icon" position="590,110" size="53,53" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" alphatest="blend" conditional="icon" scale="1" transparent="1" />
     <widget name="list" position="85,375" size="545,200" selectionPixmap="PLi-HD/buttons/sel.png" font="Regular;22" />
   </screen>
 
@@ -1552,56 +1550,96 @@
 
   <screen name="MessageBoxSimple" position="center,center" size="600,10" title="Message" zPosition="10" flags="wfNoBorder">
     <widget source="Title" render="Label" position="2,2" size="200,20" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;18" verticalAlignment="center" horizontalAlignment="left" />
+    <widget name="icon" position="5,5" size="53,53" pixmaps="icons/input_question.png,icons/input_info.png,icons/input_warning.png,icons/input_error.png,icons/input_message.png" alphatest="blend" conditional="icon" scale="1" transparent="1" />
     <widget name="text" position="65,8" size="520,0" font="Regular;22" />
-    <widget name="ErrorPixmap" pixmap="icons/input_error.png" position="5,5" size="53,53" alphaTest="on" />
-    <widget name="QuestionPixmap" pixmap="icons/input_question.png" position="5,5" size="53,53" alphaTest="on" />
-    <widget name="InfoPixmap" pixmap="PLi-HD/icons/input_info.png" position="5,5" size="53,53" alphaTest="on" />
     <widget name="list" position="100,100" size="480,375" selectionPixmap="PLi-HD/buttons/sel.png"/>
 	<applet type="onLayoutFinish">
-from enigma import eSize, ePoint
-if self.timerRunning:
-	titleheight = 20
+# this should be factored out into some helper code,but currently demonstrates applets.
+from __future__ import division
+from enigma import eSize, ePoint, getDesktop, eRectangle
+#orgwidth = self.instance.size().width()
+#orgheight = self.instance.size().height()
+#---
+offset_listposx = 10
+offset_listposy = 90
+offset_listwidth = 10
+offset_listheight = 30
+offset_textwidth = 170
+offset_textheight = 20
+min_width = 400
+min_height = 50
+#----
+deskwidth = getDesktop(0).size().width()
+deskheight = getDesktop(0).size().height()
+textsize = self["text"].getSize()
+textwidth = textsize[0] + offset_textwidth
+textheight = textsize[1] + offset_textheight
+
+listwidth = 0
+listheight = 0
+
+if self.list:
+	try:
+		for i in self.list:
+			if len(i[0]) > listwidth:
+				listwidth = len(i[0])
+		listwidth = listwidth * offset_listwidth
+		listheight = len(self.list) * offset_listheight
+	except:
+		pass
+
+maxheight = int(deskheight * 0.75)
+
+if listheight &gt;maxheight:
+	listheight = maxheight
+
+if (min_height &gt;textheight):
+	textheight = min_height
+if (min_width &gt;textwidth):
+	textwidth = min_width
+if (listheight &gt;0):
+	offset = 21
 else:
-	titleheight = 0
-	self.setTitle("")
-orgwidth = self.instance.size().width()
-orgheight = self.instance.size().height()
-orgpos = self.instance.position()
-textsize = self[&quot;text&quot;].getSize()
-textsize = (textsize[0] + 50, textsize[1] + 20)
-wsizex = textsize[0] + 60
-wsizey = textsize[1]
-lenlist = len(self.list)*25
-if (lenlist &gt; 125):
-	lenlist = 125
-if (64 &gt; wsizey):
-	wsizey = 64
-if self.type == self.TYPE_YESNO:
-	wsizey += lenlist + 10
-if (280 &gt; wsizex):
-	wsizex = 280
-listwidth = self.getListWidth() + 10
-if (listwidth &gt; 580):
-	listwidth = 580
-if (listwidth &gt; wsizex):
-	wsizex = listwidth
-wsize = (wsizex, wsizey + titleheight)
+	offset = 13
+if (textwidth &gt;listwidth):
+	wsizex = textwidth + offset_listposx * 2
+else:
+	textwidth = listwidth - offset_listposx
+	wsizex = listwidth + offset_listposx
+
+wsizey = textheight + listheight + offset
+
+if ((wsizey + offset_listposy - offset_listposx) &gt;deskheight):
+	textheight = deskheight - listheight - offset - offset_listposy + offset_listposx
+	wsizey = textheight + listheight + offset
+
+if (wsizex &gt;deskwidth):
+	textwidth = deskwidth - offset_listposx * 2
+	listwidth = wsizex = deskwidth
+
+wsize = (wsizex,wsizey + offset_listposy - offset_listposx)
+
+# resize
 self.instance.resize(eSize(*wsize))
-self[&quot;text&quot;].instance.move(ePoint(65, 8 + titleheight))
-self[&quot;text&quot;].instance.resize(eSize(*textsize))
-self[&quot;ErrorPixmap&quot;].instance.move(ePoint(5, 5 + titleheight))
-self[&quot;ErrorPixmap&quot;].instance.resize(eSize(53,53))
-self[&quot;QuestionPixmap&quot;].instance.move(ePoint(5, 5 + titleheight))
-self[&quot;QuestionPixmap&quot;].instance.resize(eSize(53,53))
-self[&quot;InfoPixmap&quot;].instance.move(ePoint(5, 5 + titleheight))
-self[&quot;InfoPixmap&quot;].instance.resize(eSize(53,53))
-if self.type == self.TYPE_YESNO:
-	listsize = (wsizex-4, lenlist)
-	self[&quot;list&quot;].instance.move(ePoint(2, wsizey - lenlist + titleheight - 2))
-	self[&quot;list&quot;].instance.resize(eSize(*listsize))
+
+# resize label
+textsize = (textwidth,textheight)
+self["text"].instance.resize(eSize(*textsize))
+
+# move list
+if self.list:
+	listsize = (wsizex - offset_listposx * 2,listheight)
+	self["list"].instance.move(ePoint(offset_listposx,textheight + offset_listposy))
+	self["list"].instance.resize(eSize(*listsize))
+
+# center window
 newwidth = wsize[0]
-self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth) // 2, orgpos.y() + (orgheight - wsizey) // 2))
-	</applet>
+newheight = wsize[1]
+self.instance.move(ePoint(int(deskwidth - newwidth)//2,int(deskheight - newheight)//2))
+for x in self.additionalWidgets:
+	if isinstance(x.instance, eRectangle):
+		x.instance.resize(eSize(*wsize))
+		</applet>
   </screen>
 
   <!-- TimeDateInput -->
