@@ -2115,7 +2115,7 @@ from enigma import eSize, ePoint, getDesktop, eRectangle
 offset_listposx = 10
 offset_listposy = 90
 offset_listwidth = 10
-offset_listheight = 30
+offset_listheight = 50
 offset_textwidth = 170
 offset_textheight = 20
 min_width = 400
