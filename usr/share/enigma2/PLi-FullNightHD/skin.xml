@@ -2568,7 +2568,7 @@ for x in self.additionalWidgets:
 
 	<!-- Virtual Keyboard -->
 
-	<screen name="VirtualKeyBoard" title="Virtual keyboard" position="fill" zPosition="99">
+	<screen name="VirtualKeyBoard" title="Virtual keyboard" position="fill" zPosition="99" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
 		<ePixmap pixmap="buttons/key_text.png" alphaTest="blend" position="30,1031" size="52,38"/>
 		<ePixmap pixmap="buttons/key_info.png" alphaTest="blend" position="82,1031" size="52,38"/>
