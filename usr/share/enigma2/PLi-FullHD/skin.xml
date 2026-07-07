@@ -2477,9 +2477,9 @@ for x in self.additionalWidgets:
 		<widget name="AboutScrollLabel" font="Regular;28" position="780,100" size="1110,912" zPosition="2" split="1" dividechar=":" colposition="0"/>
 	</screen>
 
-	<screen name="PictureInformation" position="fill" flags="wfNoBorder">
+	<screen name="InformationPicture" position="fill" flags="wfNoBorder">
 		<widget name="name" position="810,385" size="415,220" font="Regular;28" conditional="description" halign="center" valign="center" transparent="1"/>
-		<widget name="image" position="70,100" size="700,480" alphatest="blend" scaleFlags="scaleCenter" transparent="1" />
+		<widget name="picture" position="70,100" size="700,480" alphatest="blend" scaleFlags="scaleCenter" transparent="1" />
 	</screen>
 
 	<screen name="information_common">
@@ -2493,7 +2493,7 @@ for x in self.additionalWidgets:
 		<widget name="information" font="Regular;30" position="30,100" size="1860,912" conditional="information" halign="left" scrollbarWidth="3" scrollbarBorderWidth="0" transparent="1" />
 	</screen>
 
-	<screen name="DistributionInformation" position="fill" flags="wfNoBorder">
+	<screen name="InformationDistribution" position="fill" flags="wfNoBorder">
 		<panel name="information_common" />
 	</screen>
 
@@ -2501,15 +2501,15 @@ for x in self.additionalWidgets:
 		<panel name="information_common" />
 	</screen>
 
-	<screen name="SystemInformation" position="fill" flags="wfNoBorder">
+	<screen name="InformationSystem" position="fill" flags="wfNoBorder">
 		<panel name="information_common2" />
 	</screen>
 
-	<screen name="CommitInformation" position="fill" flags="wfNoBorder">
+	<screen name="InformationCommit" position="fill" flags="wfNoBorder">
 		<panel name="information_common2" />
 	</screen>
 
-	<screen name="DebugInformation" position="fill" flags="wfNoBorder">
+	<screen name="InformationDebug" position="fill" flags="wfNoBorder">
 		<panel name="information_common2" />
 	</screen>
 
