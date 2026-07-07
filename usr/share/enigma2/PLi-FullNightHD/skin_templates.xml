@@ -460,7 +460,7 @@
 	<!-- cf#_#rename -->
 
 	<screen name="wizard_rc_templateNew">
-		<widget name="rc" pixmaps="rc.png,rcold.png" position="1475,250" zPosition="10" size="154,500" alphaTest="blend" transparent="0" />
+		<widget name="rc" position="1475,250" zPosition="10" size="154,500" alphaTest="blend" transparent="0" />
 		<widget alphaTest="blend" name="indicatorU0" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11"/>
 		<widget alphaTest="blend" name="indicatorU1" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11"/>
 		<widget alphaTest="blend" name="indicatorU2" pixmap="skin_default/yellow_circle23x23.png" position="1425,210" offset="11,11" size="23,23" zPosition="11"/>
