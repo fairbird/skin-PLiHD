@@ -2681,7 +2681,7 @@ for x in self.additionalWidgets:
 	<screen name="Config" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
 		<panel name="KeyMenuTemplate"/>
-		<widget name="config" valueFont="Regular;28" position="780,105" size="1110,300" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/>
+		<widget name="config" valueFont="Regular;28" position="780,105" size="1110,342" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/>
 		<widget name="statusbar" position="780,495" size="1110,35" font="Regular;32"/>
 		<widget name="status" position="780,540" size="1110,410" font="Console;20"/>
 	</screen>

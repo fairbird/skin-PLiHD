@@ -1919,7 +1919,7 @@ for x in self.additionalWidgets:
 
   <screen name="StreamingClientsInfo" position="fill" flags="wfNoBorder">
     <panel name="PigTemplate"/>
-    <widget name="menu" position="590,110" size="540,200" zPosition="1" />
+    <widget name="menu" position="590,110" size="540,225" zPosition="1" />
     <widget name="info" position="590,110" size="540,25" font="Regular;22" horizontalAlignment="center" transparent="1" zPosition="2"/>
   </screen>
 
