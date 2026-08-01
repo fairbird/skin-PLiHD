@@ -451,6 +451,9 @@
 		<widget source="Service" render="Label" position="600,525" size="150,30" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="secondFG" font="Regular;26" horizontalAlignment="right">
 			<convert type="ServiceOrbitalPosition"/>
 		</widget>
+		<widget source="Rating" render="Label" position="30,565" size="720,30" transparent="1" zPosition="1" foregroundColor="blue" font="Regular;26" halign="left">
+			<convert type="EventName">Rating</convert>
+		</widget>
 		<widget source="Event" render="Label" position="30,605" size="720,35" foregroundColor="secondFG" font="Regular;32" transparent="1">
 			<convert type="EventName">Name</convert>
 		</widget>
