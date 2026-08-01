@@ -414,7 +414,7 @@
 		<panel name="SelectionTemplate"/>
 		<panel name="KeyMenuTemplate"/>
 		<panel name="KeyInfoTemplate"/>
-		<widget name="list" position="780,100" size="1110,912" itemHeight="38" setEventItemFont="Regular;32" setColWidths="120,220" setColGap="40" setIconDistance="10" transparent="1" scrollbarMode="showOnDemand"/>
+		<widget name="list" position="780,100" size="1110,912" itemHeight="45" setEventItemFont="Regular; 32" transparent="1" scrollbarMode="showOnDemand" enableWrapAround="1" scrollbarWidth="3" scrollbarBorderWidth="0" setColGap="40" setIconDistance="10" />
 		<widget source="Service" render="Label" position="30,525" size="720,30" foregroundColor="transponderinfo" font="Regular;26" verticalAlignment="center" horizontalAlignment="center" transparent="1" zPosition="1">
 			<convert type="TransponderInfo"/>
 		</widget>
