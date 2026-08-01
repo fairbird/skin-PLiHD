@@ -357,10 +357,10 @@
       <convert type="EventTime">Remaining</convert>
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
-    <widget source="session.Event_Now" render="Label" position="85,515" size="450,30" transparent="1" zPosition="1" foregroundColor="blue" font="Regular;22" horizontalAlignment="left">
+    <widget source="Event" render="Label" position="85,515" size="450,30" transparent="1" zPosition="1" foregroundColor="blue" font="Regular;22" horizontalAlignment="left">
       <convert type="EventName">Genre</convert>
     </widget>
-    <widget source="session.Event_Now" render="Label" position="85,555" size="450,30" transparent="1" zPosition="1" foregroundColor="blue" font="Regular;22" horizontalAlignment="left">
+    <widget source="Event" render="Label" position="85,555" size="450,30" transparent="1" zPosition="1" foregroundColor="blue" font="Regular;22" horizontalAlignment="left">
       <convert type="EventName">Rating</convert>
     </widget>
     <widget source="session.Event_Next" render="Label" position="85,590" size="450,26" font="Regular;22" horizontalAlignment="left" foregroundColor="secondFG" transparent="1">
