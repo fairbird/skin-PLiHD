@@ -3017,6 +3017,7 @@ for x in self.additionalWidgets:
 	<menu key="dvdplayer_setup" image="icons_Menu/menu_extended_dvdplayer_setup.png" />
 	<menu key="emc" image="icons_Menu/emc.png" />
 	<menu key="epg_setup" image="icons_Menu/menu_epg_epg_setup.png" />
+	<menu key="crossepg" image="icons_Menu/menu_epg_setup_epgmulti.png" />
 	<menu key="epgimporter" image="icons_Menu/menu_epgloadsave_menu_loadepgcache.png" />
 	<menu key="epgloadsave_menu" image="icons_Menu/menu_epg_epgloadsave_menu.png" />
 	<menu key="epgrefresh" image="icons_Menu/menu_epg_refresh.png" />
@@ -3181,6 +3182,7 @@ for x in self.additionalWidgets:
 	<menu key="upgrade_source" image="icons_Menu/menu_upgrade_source.png" />
 
 	<menu key="timermenu" image="icons_Menu/menu_mainmenu_timer.png" />
+	<menu key="setsleeptimer" image="icons_Menu/menu_mainmenu_timer.png" />
 	<menu key="setup" image="icons_Menu/setup.png" />
 	<menu key="rec" image="icons_Menu/menu_extended_recording_setup.png" />
 	<menu key="display" image="icons_Menu/menu_extended_display_selection.png" />
@@ -3191,12 +3193,14 @@ for x in self.additionalWidgets:
 	<menu key="extended" image="icons_Menu/menu_system_extended_selection.png" />
 	<menu key="harddisk" image="icons_Menu/menu_extended_hardisk_selection.png" />
 	<menu key="network_setup" image="icons_Menu/menu_system_network_menu.png" />
+	<menu key="network" image="icons_Menu/menu_system_network_menu.png" />
 	<menu key="shutdown" image="icons_Menu/reset.png" />
 	<menu key="epg" image="icons_Menu/menu_epg_epg_setup.png" />
+	<menu key="epg_panel" image="icons_Menu/menu_epg_epg_setup.png" />
 	<menu key="system" image="icons_Menu/menu_setup_setup.png" />
 	<menu key="TSSkinSetup" image="icons_Menu/menu_setup_setup.png" />
 
-  <!--<menu key="information" image="icons_Menu/menu_information.png" />-->
+	<!--<menu key="information" image="icons_Menu/menu_information.png" />-->
 	<menu key="information" image="icons_Menu/info.png" />
 	<menu key="distribution_info_screen" image="icons_Menu/menu_information_about.png" />
 	<menu key="receiver_info_screen" image="icons_Menu/menu_receiver_info.png" />
@@ -3227,6 +3231,8 @@ for x in self.additionalWidgets:
 	<menu key="netmounts_manager" image="icons_Menu/menu_network_netmounts_setup.png" />
 	<menu key="netmounts_browser" image="icons_Menu/menu_network_netmounts_setup.png" />
 	<menu key="device_manager" image="icons_Menu/menu_device_manager.png" />
+
+	<menu key="chroot_multiboot" image="icons_Menu/menu_multiboot.png" />
 
 </menus>
 
