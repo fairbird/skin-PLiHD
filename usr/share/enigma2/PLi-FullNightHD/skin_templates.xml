@@ -424,6 +424,80 @@
 		<!--<ePixmap pixmap="icons/icon_update_off.png" position="90,52" size="30,30" zPosition="0" alphaTest="blend"/>-->
 	</screen>
 
+<!-- Weather Infobar Template -->
+	<screen name="WeatherInfobarTemplate">
+	  <ePixmap alphatest="blend" pixmap="PLi-FullNightHD/weather/extra_icons/temp.png" position="656,896" size="30,100" zPosition="2"/>
+	  <ePixmap alphatest="blend" pixmap="PLi-FullNightHD/weather/extra_icons/temp.png" position="1041,896" size="30,100" zPosition="2"/>
+	  <ePixmap alphatest="blend" pixmap="PLi-FullNightHD/weather/extra_icons/temp.png" position="1421,896" size="30,100" zPosition="2"/>
+	  <ePixmap alphatest="blend" pixmap="PLi-FullNightHD/weather/extra_icons/temp.png" position="1826,896" size="30,100" zPosition="2"/>
+	  <widget source="session.MSNWeather" render="Label" position="395,1003" size="538,50" font="Regular;32" zPosition="1" halign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+	    <convert type="MSNWeather">city</convert>
+	  </widget>
+	  <eLabel text="Current:" position="15,990" size="160,40" font="Regular;35" zPosition="1" halign="right" foregroundColor="foreground" backgroundColor="background" transparent="1"/>
+	  <widget source="session.MSNWeather" render="MSNWeatherPixmap" position="101,825" size="183,146" zPosition="1" transparent="1" alphatest="blend">
+	    <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/WeatherIcon/,png</convert>
+	  </widget>
+	  <widget source="session.MSNWeather" render="Label" position="181,975" size="203,80" font="Regular;60" zPosition="1" foregroundColor="#00ff4a3c" backgroundColor="background" transparent="1" noWrap="1" halign="center">
+	    <convert type="MSNWeather">temperature_current</convert>
+	  </widget>
+	  <eLabel text="Feeling the temperature:" position="925,1003" size="382,50" font="Regular;32" zPosition="1" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1"/>
+	  <widget source="session.MSNWeather" render="Label" position="1310,1003" size="210,50" font="Regular;32" zPosition="1" valign="center" foregroundColor="#00f9c731" backgroundColor="background" transparent="1" noWrap="1">
+	    <convert type="MSNWeather">feelslike</convert>
+	  </widget>
+	  <eLabel text="humidity:" position="1544,1003" size="200,50" font="Regular;32" zPosition="1" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1"/>
+	  <widget source="session.MSNWeather" render="Label" position="1706,1003" size="210,50" font="Regular;32" zPosition="1" valign="center" foregroundColor="#00f9c731" backgroundColor="background" transparent="1" noWrap="1">
+	    <convert type="MSNWeather">humidity</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="background" font="Regular;35" foregroundColor="foreground" render="Label" position="432,852" size="242,40" source="session.MSNWeather" zPosition="3" halign="center" transparent="1">
+	    <convert type="MSNWeather">weekshortday,day2</convert>
+	  </widget>
+	  <widget alphatest="blend" render="MSNWeatherPixmap" position="424,900" size="100,100" source="session.MSNWeather" transparent="1" zPosition="5">
+	    <convert type="MSNWeather">weathericon,day2,/usr/share/enigma2/PLi-FullNightHD/weather/weather_icons/,png</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="background" font="Regular;35" render="Label" position="529,900" size="123,45" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" valign="center" foregroundColor="foreground">
+	    <convert type="MSNWeather">temperature_high,day2</convert>
+	  </widget>
+	  <widget backgroundColor="background" font="Regular;35" render="Label" position="529,948" size="123,45" source="session.MSNWeather" zPosition="1" halign="center" transparent="1" noWrap="1" foregroundColor="foreground">
+	    <convert type="MSNWeather">temperature_low,day2</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="background" font="Regular;35" foregroundColor="foreground" render="Label" position="815,850" size="242,40" source="session.MSNWeather" zPosition="3" halign="center" transparent="1">
+	    <convert type="MSNWeather">weekshortday,day3</convert>
+	  </widget>
+	  <widget alphatest="blend" render="MSNWeatherPixmap" position="815,900" size="100,100" source="session.MSNWeather" transparent="1" zPosition="5">
+	    <convert type="MSNWeather">weathericon,day3,/usr/share/enigma2/PLi-FullNightHD/weather/weather_icons/,png</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="background" font="Regular;35" render="Label" position="913,897" size="123,45" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" valign="center" foregroundColor="foreground">
+	    <convert type="MSNWeather">temperature_high,day3</convert>
+	  </widget>
+	  <widget backgroundColor="background" font="Regular;35" render="Label" position="913,948" size="123,45" source="session.MSNWeather" zPosition="1" halign="center" transparent="1" noWrap="1" foregroundColor="foreground">
+	    <convert type="MSNWeather">temperature_low,day3</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="background" font="Regular;35" foregroundColor="foreground" render="Label" position="1196,850" size="242,40" source="session.MSNWeather" zPosition="3" halign="center" transparent="1">
+	    <convert type="MSNWeather">weekshortday,day4</convert>
+	  </widget>
+	  <widget alphatest="blend" render="MSNWeatherPixmap" position="1191,900" size="100,100" source="session.MSNWeather" transparent="1" zPosition="5">
+	    <convert type="MSNWeather">weathericon,day4,/usr/share/enigma2/PLi-FullNightHD/weather/weather_icons/,png</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="background" font="Regular;35" render="Label" position="1293,900" size="123,45" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" valign="center" foregroundColor="foreground">
+	    <convert type="MSNWeather">temperature_high,day4</convert>
+	  </widget>
+	  <widget backgroundColor="background" font="Regular;35" render="Label" position="1293,948" size="123,45" source="session.MSNWeather" zPosition="1" halign="center" transparent="1" noWrap="1" foregroundColor="foreground">
+	    <convert type="MSNWeather">temperature_low,day4</convert>
+	  </widget>
+	  <widget alphatest="blend" render="MSNWeatherPixmap" position="1584,900" size="100,100" source="session.MSNWeather" transparent="1" zPosition="5">
+	    <convert type="MSNWeather">weathericon,day5,/usr/share/enigma2/PLi-FullNightHD/weather/weather_icons/,png</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="background" font="Regular;35" foregroundColor="foreground" render="Label" position="1589,850" size="242,40" source="session.MSNWeather" zPosition="3" halign="center" transparent="1">
+	    <convert type="MSNWeather">weekshortday,day5</convert>
+	  </widget>
+	  <widget noWrap="1" backgroundColor="background" font="Regular;35" render="Label" position="1691,900" size="123,45" source="session.MSNWeather" zPosition="3" halign="center" transparent="1" valign="center" foregroundColor="foreground">
+	    <convert type="MSNWeather">temperature_high,day5</convert>
+	  </widget>
+	  <widget backgroundColor="background" font="Regular;35" render="Label" position="1691,948" size="123,45" source="session.MSNWeather" zPosition="1" halign="center" transparent="1" noWrap="1" foregroundColor="foreground">
+	    <convert type="MSNWeather">temperature_low,day5</convert>
+	  </widget>
+	</screen>
+
 <!-- ChannelSelection Template -->
 	<screen name="ChannelSelectionTemplate" title="Channel Selection" position="fill" flags="wfNoBorder">
 		<panel name="SelectionTemplate"/>

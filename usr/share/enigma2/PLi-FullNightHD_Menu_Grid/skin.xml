@@ -304,7 +304,8 @@
 		<widget source="session.Event_Next" render="Label" position="975,260" size="915,560" font="Regular;30" horizontalAlignment="block" zPosition="1" transparent="1">
 			<convert type="EventName">FullDescription</convert>
 		</widget>
-		<panel name="InfoBarTemplate"/>
+		<!--panel name="InfoBarTemplate"/-->
+		<panel name="WeatherInfobarTemplate"/>
 	</screen>
 
 	<!-- Movie Player Infobar -->
