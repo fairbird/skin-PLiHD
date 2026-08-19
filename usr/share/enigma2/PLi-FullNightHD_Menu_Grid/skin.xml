@@ -1821,6 +1821,207 @@
 		<widget name="HelpWindow" position="75,615" size="1,1" transparent="1" zPosition="1" alphaTest="on"/>
 	</screen>
 
+	<screen name="NetworkOverview" title="Network Overview" backgroundColor="#16000000" position="center,center" size="1200,600" resolution="1280,720" flags="wfNoBorder">
+		<widget source="adapterList" render="Listbox" backgroundColor="#16000000" position="10,10" size="e-20,250">
+			<template name="Default" colors="#0000CC00,#00CC0000,#00CCCCCC,#00003300,#00330000,#00333333" fonts="Regular;25,enigma2icons;38,Regular;24,Regular;18,enigma2icons;20" itemHeight="50">
+				<rowtemplate>
+					<text index="AdapterName" position="0,0" size="240,50" font="0" foregroundColor="#005a5a5a" padding="5,0" verticalAlignment="center" />
+					<text index="StatusText" position="280,0" size="170,50" font="0" foregroundColor="#005a5a5a" padding="5,0" verticalAlignment="center" />
+					<text index="MAC" position="450,0" size="170,50" font="0" foregroundColor="#005a5a5a" padding="5,0" verticalAlignment="center" />
+					<text index="IPAddress" position="620,0" size="150,50" font="0" foregroundColor="#005a5a5a" padding="5,0" verticalAlignment="center" />
+					<text index="Gateway" position="770,0" size="140,50" font="0" foregroundColor="#005a5a5a" padding="5,0" verticalAlignment="center" />
+					<text index="Speed" position="910,0" size="140,50" font="0" foregroundColor="#005a5a5a" padding="5,0" verticalAlignment="center" />
+				</rowtemplate>
+				<rowtemplate>
+					<text index="AdapterGlyph" position="0,6" size="48,38" font="1" horizontalAlignment="center" padding="5,0" verticalAlignment="center" />
+					<text index="AdapterName" position="60,0" size="180,28" font="2" padding="5,0" verticalAlignment="center" />
+					<text index="AdapterType" position="60,28" size="180,22" font="3" padding="5,0" verticalAlignment="center" />
+					<text index="InternetGlyph" position="240,15" size="40,20" font="4" horizontalAlignment="center" padding="5,0" verticalAlignment="center" />
+					<text index="StatusText" position="280,0" size="170,50" font="3" foregroundColor="+StatusColor" foregroundColorSelected="+StatusColorSelected" padding="5,0" verticalAlignment="center" />
+					<text index="MAC" position="450,0" size="170,50" font="3" padding="5,0" verticalAlignment="center" />
+					<text index="IPAddress" position="620,0" size="150,50" font="3" padding="5,0" verticalAlignment="center" />
+					<text index="Gateway" position="770,0" size="140,50" font="3" padding="5,0" verticalAlignment="center" />
+					<text index="Speed" position="910,0" size="140,50" font="3" padding="5,0" verticalAlignment="center" />
+				</rowtemplate>
+			</template>
+		</widget>
+		<widget source="savedLabel" render="Label" position="10,270" size="e-20,25" foregroundColor="#005a5a5a" backgroundColor="#16000000" padding="10,0" verticalAlignment="center" widgetBorderColor="#005a5a5a" widgetBorderWidth="1">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="savedList" render="Listbox" position="10,305" size="e-20,175">
+			<template name="Default" colors="#0000CC00,#00CC0000,#00CCCCCC,#00003300,#00330000,#00333333" fonts="Regular;25,Regular;20" itemHeight="35">
+				<rowtemplate>
+					<text index="SSID" position="0,0" size="280,35" font="0" foregroundColor="#005a5a5a" padding="5,0" verticalAlignment="center" />
+					<text index="StatusText" position="280,0" size="170,35" font="0" foregroundColor="#005a5a5a" padding="5,0" verticalAlignment="center" />
+					<text index="BSSID" position="450,0" size="210,35" font="0" foregroundColor="#005a5a5a" padding="5,0" verticalAlignment="center" />
+					<text index="Frequency" position="660,0" size="120,35" font="0" foregroundColor="#005a5a5a" padding="5,0" verticalAlignment="center" />
+					<text index="Channel" position="780,0" size="120,35" font="0" foregroundColor="#005a5a5a" padding="5,0" verticalAlignment="center" />
+					<text index="Encryption" position="900,0" size="150,35" font="0" foregroundColor="#005a5a5a" padding="5,0" verticalAlignment="center" />
+				</rowtemplate>
+				<rowtemplate>
+					<text index="SSID" position="0,0" size="280,35" font="1" padding="5,0" verticalAlignment="center" />
+					<text index="StatusText" position="280,0" size="170,35" font="1" foregroundColor="+StatusColor" foregroundColorSelected="+StatusColorSelected" padding="5,0" verticalAlignment="center" />
+					<text index="BSSID" position="450,0" size="210,35" font="1" padding="5,0" verticalAlignment="center" />
+					<text index="Frequency" position="660,0" size="120,35" font="1" padding="5,0" verticalAlignment="center" />
+					<text index="Channel" position="780,0" size="120,35" font="1" padding="5,0" verticalAlignment="center" />
+					<text index="Encryption" position="900,0" size="150,35" font="1" padding="5,0" verticalAlignment="center" />
+				</rowtemplate>
+			</template>
+		</widget>
+		<widget source="key_red" render="Label" position="10,e-50" size="180,40" backgroundColor="key_red" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_green" render="Label" position="200,e-50" size="180,40" backgroundColor="key_green" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_yellow" render="Label" position="390,e-50" size="180,40" backgroundColor="key_yellow" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_blue" render="Label" position="580,e-50" size="180,40" backgroundColor="key_blue" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_menu" render="Label" position="e-300,e-50" size="90,40" backgroundColor="key_back" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_info" render="Label" position="e-200,e-50" size="90,40" backgroundColor="key_back" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_help" render="Label" position="e-100,e-50" size="90,40" backgroundColor="key_back" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+
+	<screen name="NetworkTest" title="Network Test" backgroundColor="#16000000" position="center,center" size="850,300" resolution="1280,720" flags="wfNoBorder">
+		<widget source="list" render="Listbox" backgroundColor="#16000000" position="10,10" size="e-20,e-60" scrollbarMode="showNever" selection="false">
+			<template name="Default" fonts="enigma2icons;25,Regular;25" itemHeight="35">
+				<mode name="default">
+					<text index="Glyph" position="0,0" size="35,35" font="0" foregroundColor="+Color" foregroundColorSelected="+Color" horizontalAlignment="center" padding="5,0" verticalAlignment="center" />
+					<text index="Label" position="60,0" size="200,35" font="1" padding="5,0" verticalAlignment="center" />
+					<text index="Result" position="260,0" size="250,35" font="1" foregroundColor="+Color" foregroundColorSelected="+Color" padding="5,0" verticalAlignment="center" />
+					<text index="Detail" position="510,0" size="300,35" font="1" padding="5,0" verticalAlignment="center" />
+				</mode>
+			</template>
+		</widget>
+		<widget source="key_red" render="Label" position="10,e-50" size="180,40" backgroundColor="key_red" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_green" render="Label" position="200,e-50" size="180,40" backgroundColor="key_green" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_help" render="Label" position="e-100,e-50" size="90,40" backgroundColor="key_back" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+
+	<screen name="NetworkWiFiScan" title="Wi-Fi Scan" backgroundColor="#16000000" position="center,center" size="1200,600" resolution="1280,720" flags="wfNoBorder">
+		<widget source="list" render="Listbox" backgroundColor="#16000000" position="10,10" size="e-20,e-105">
+			<template name="Default" fonts="Regular;28,Regular;25,enigma2icons;25" itemHeight="40">
+				<mode name="default">
+					<panel position="0,0" size="e,e" layout="horizontal">
+						<text index="Name" position="left" size="450,35" flags="scroll" font="0" padding="5,0" verticalAlignment="center" />
+						<text index="Glyph" position="left" size="30,35" font="2" horizontalAlignment="center" padding="5,0" verticalAlignment="center" />
+						<text index="Percentage" position="left" size="60,35" font="1" horizontalAlignment="right" padding="5,0" verticalAlignment="center" />
+						<text index="dBm" position="left" size="90,35" font="1" horizontalAlignment="right" padding="10,0" verticalAlignment="center" />
+						<text index="Encryption" position="left" size="100,35" font="1" horizontalAlignment="center" padding="10,0" verticalAlignment="center" />
+						<text index="Channel" position="left" size="80,35" font="1" horizontalAlignment="center" padding="10,0" verticalAlignment="center" />
+						<text index="Frequency" position="right" size="110,35" font="1" horizontalAlignment="right" padding="10,0" verticalAlignment="center" />
+					</panel>
+				</mode>
+			</template>
+		</widget>
+		<widget name="description" position="10,e-85" size="e-20,25" font="Regular;20" padding="5,0" verticalAlignment="center" widgetBorderColor="#005a5a5a" widgetBorderWidth="1" />
+		<widget source="key_red" render="Label" position="10,e-50" size="180,40" backgroundColor="key_red" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_green" render="Label" position="200,e-50" size="180,40" backgroundColor="key_green" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_yellow" render="Label" position="390,e-50" size="180,40" backgroundColor="key_yellow" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_help" render="Label" position="e-100,e-50" size="90,40" backgroundColor="key_back" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+
+	<screen name="NetworkWiFiActivator" title="Wi-Fi Activator" backgroundColor="#16000000" position="center,center" size="700,220" resolution="1280,720" flags="wfNoBorder">
+		<widget name="status" position="10,10" size="e-20,e-80" font="Regular;20" horizontalAlignment="center" verticalAlignment="center" />
+		<widget source="key_red" render="Label" position="10,e-50" size="180,40" backgroundColor="key_red" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+
+	<screen name="NetworkMountsOverview" title="Network Mounts Overview" backgroundColor="#16000000" position="center,center" size="870,370" resolution="1280,720" flags="wfNoBorder">
+		<widget source="mountList" render="Listbox" backgroundColor="#16000000" position="10,10" size="e-20,e-70">
+			<templates>
+				<template name="Default" fonts="Regular;22,Regular;18" itemHeight="50">
+					<mode name="default">
+						<text index="ShareName" position="0,0" size="550,28" font="0" padding="5,0" verticalAlignment="center" />
+						<text index="Description" position="20,28" size="530,20" font="1" padding="5,0" foregroundColor="gray" />
+						<text index="Mounted" position="550,0" size="150,50" font="0" padding="5,0" verticalAlignment="center" />
+						<text index="Active" position="700,0" size="150,50" font="0" horizontalAlignment="right" padding="5,0" verticalAlignment="center" />
+					</mode>
+				</template>
+			</templates>
+		</widget>
+		<widget source="key_red" render="Label" position="0,e-40" size="180,40" backgroundColor="key_red" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_green" render="Label" position="190,e-40" size="180,40" backgroundColor="key_green" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_yellow" render="Label" position="380,e-40" size="180,40" backgroundColor="key_yellow" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_blue" render="Label" position="570,e-40" size="180,40" backgroundColor="key_blue" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_menu" render="Label" position="e-170,e-40" size="80,40" backgroundColor="key_back" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_help" render="Label" position="e-80,e-40" size="80,40" backgroundColor="key_back" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" wrap="off" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+
+	<screen name="NetworkShares" title="Network Shares Browser" backgroundColor="#16000000" position="center,center" size="872,505" resolution="1280,720" flags="wfNoBorder">
+		<widget source="list" render="Listbox" backgroundColor="#16000000" position="10,10" size="e-20,e-105">
+			<template name="Default" fonts="enigma2icons;42,Regular;25,enigma2icons;32,Regular;20" itemHeight="50">
+				<rowtemplate>
+					<text index="Glyph" position="0,4" size="52,42" font="0" horizontalAlignment="center" padding="5,0" verticalAlignment="center" />
+					<text index="IPAddress" position="52,0" size="220,50" font="1" padding="5,0" verticalAlignment="center" />
+					<text index="Name" position="272,0" size="580,50" font="1" padding="5,0" verticalAlignment="center" />
+				</rowtemplate>
+				<rowtemplate>
+					<text index="Glyph" position="50,9" size="42,32" font="2" foregroundColor="+GlyphColor" horizontalAlignment="center" padding="5,0" verticalAlignment="center" />
+					<text index="Type" position="102,0" size="50,50" font="3" foregroundColor="gray" padding="5,0" verticalAlignment="center" />
+					<text index="Name" position="152,0" size="200,50" font="3" padding="5,0" verticalAlignment="center" />
+					<text index="Description" position="352,0" size="500,25" font="3" padding="5,0" verticalAlignment="center" />
+					<text index="LocalPath" position="372,25" size="480,25" font="3" foregroundColor="gray" padding="5,0" verticalAlignment="center" />
+				</rowtemplate>
+			</template>
+		</widget>
+		<widget name="description" position="10,e-85" size="e-20,25" font="Regular;20" padding="5,0" verticalAlignment="center" widgetBorderColor="gray" widgetBorderWidth="1" />
+		<widget source="key_red" render="Label" position="0,e-40" size="180,40" backgroundColor="key_red" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" noWrap="1" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_green" render="Label" position="190,e-40" size="180,40" backgroundColor="key_green" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" noWrap="1" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_yellow" render="Label" position="380,e-40" size="180,40" backgroundColor="key_yellow" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" noWrap="1" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_blue" render="Label" position="570,e-40" size="180,40" backgroundColor="key_blue" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" noWrap="1" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_menu" render="Label" position="e-180,e-40" size="100,40" backgroundColor="key_back" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" noWrap="1" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="key_help" render="Label" position="e-80,e-40" size="80,40" backgroundColor="key_back" font="Regular;20" foregroundColor="key_text" horizontalAlignment="center" noWrap="1" verticalAlignment="center">
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+
 	<screen name="NetworkMacSetup" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
 		<widget name="config" valueFont="Regular;28" position="780,105" size="1110,418" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/>
