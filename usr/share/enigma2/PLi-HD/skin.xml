@@ -1015,9 +1015,9 @@
     <widget name="checkList" position="590,110" size="600,500" backgroundColor="darkgrey" zPosition="3" transparent="1" scrollbarMode="showOnDemand" selectionPixmap="PLi-HD/buttons/sel.png" />
   </screen>
 
-  <!-- Opkg installer -->
+  <!-- Ipkg installer -->
 
-  <screen name="OpkgInstaller" position="fill" flags="wfNoBorder">
+  <screen name="IpkgInstaller" position="fill" flags="wfNoBorder">
     <panel name="PigTemplate"/>
     <eLabel text="Install extensions" position="85,30" size="1085,55" backgroundColor="secondBG" transparent="1" zPosition="1" font="Regular;24" verticalAlignment="center" horizontalAlignment="left" />
     <widget name="list" position="590,110" size="600,450" backgroundColor="darkgrey" zPosition="3" transparent="1" scrollbarMode="showOnDemand" selectionPixmap="PLi-HD/buttons/sel.png" />
