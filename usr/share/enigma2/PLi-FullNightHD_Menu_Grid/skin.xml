@@ -3496,6 +3496,7 @@ for x in self.additionalWidgets:
   <menu key="mgcamdinfo" image="icons_Menu/camd.png" />
 
   <menu key="softcam_settings" image="icons_Menu/menu_softcam_settings.png" />
+  <menu key="softcam_setup" image="icons_Menu/menu_softcam_settings.png" />
   <menu key="cardserver_settings" image="icons_Menu/menu_softcam_settings.png" />
   <menu key="autocam_settings" image="icons_Menu/menu_softcam_settings.png" />
   <menu key="oscam_info" image="icons_Menu/menu_oscam_info.png" />
@@ -3510,7 +3511,10 @@ for x in self.additionalWidgets:
   <menu key="netmounts_browser" image="icons_Menu/menu_network_netmounts_setup.png" />
   <menu key="device_manager" image="icons_Menu/menu_device_manager.png" />
 
-  <menu key="chroot_multiboot" image="icons_Menu/menu_multiboot.png" />
+  <menu key="chroot_multiboot" image="icons_Menu/menu_multiboot_info.png" />
+  <menu key="Auto backup" image="icons_Menu/Auto-backup.png" />
+  <menu key="SoftCSA Settings" image="icons_Menu/SoftCSA-Settings.png" />
 
 </menus>
+
 </skin>
