@@ -1484,6 +1484,7 @@
 		<widget name="status" position="780,163" size="1110,70" backgroundColor="darkgrey" transparent="1" font="Regular;32"/>
 		<widget name="slider" position="780,440" size="1110,20" zPosition="2" transparent="1"/>
 		<widget name="activityslider" position="30,1024" size="1860,6" pixmap="window/slider100.png" transparent="1" zPosition="2"/>
+		<widget name="log" position="784,165" size="1050,675" font="Regular;30" scrollbarMode="showOnDemand" transparent="1" conditional="log" />
 	</screen>
 
 	<!-- Choose upgrade source -->
