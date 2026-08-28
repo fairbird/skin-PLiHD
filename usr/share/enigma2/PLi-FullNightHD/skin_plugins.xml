@@ -1540,7 +1540,7 @@
 
 	<!-- BlindScan -->
 
-	<screen name="Blindscan" position="fill" title="Blind scan">
+	<screen name="Blindscan" position="fill" title="Blind scan" flags="wfNoBorder">
 		<panel name="BasicTemplate"/>
 		<!--widget name="rotorstatus" position="30,120" size="720,405" font="Regular;60" zPosition="1" transparent="1" foregroundColor="secondFG" verticalAlignment="center" horizontalAlignment="center"/-->
 		<widget name="config" valueFont="Regular;28" position="780,105" size="1110,836" itemHeight="38" font="Regular;28" scrollbarMode="showOnDemand"/>
