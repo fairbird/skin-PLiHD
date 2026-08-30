@@ -1374,8 +1374,8 @@
 
 	<screen name="RunSoftwareUpdate" title="Run Software Update" position="fill" flags="wfNoBorder">
 		<panel name="PigTemplate"/>
-		<widget name="update" position="780,100" size="1110,890" font="Regular;28" halign="center" transparent="1" valign="center" />
-		<widget name="activity" position="780,1002" size="1110,5"/>
+		<widget name="update" position="780,100" size="1110,890" font="Regular;28" transparent="1" scrollbarMode="showOnDemand" />
+		<widget name="activity" position="780,1002" size="1110,5" transparent="1" />
 	</screen>
 
 	<screen name="FileBrowser" title="DVD File Browser" position="fill" flags="wfNoBorder">
