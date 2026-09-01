@@ -1017,6 +1017,39 @@
 		<eLabel position="0,0" size="450,45" text="Timeshift Live" backgroundColor="transparent" borderWidth="2" font="Regular;37" borderColor="black"/>
 	</screen>
 
+	<!-- Seekbar state -->
+
+	<screen name="Seekbar" position="530,357" zPosition="2" size="861,345" backgroundColor="transparent" flags="wfNoBorder">
+		<widget name="cursor" position="0,0" size="24,345" pixmap="epg/timeline-now_z.png" alphatest="blend" zPosition="6" />
+		<widget name="time" position="0,60" size="861,180" backgroundColor="#67FFFFFF" foregroundColor="#34FFFFFF" font="Regular;120" halign="center" transparent="1" valign="center" />
+		<widget source="session.CurrentService" render="Label" position="48,264" size="120,41" font="Regular;30" halign="right" valign="bottom" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="693,264" size="120,41" font="Regular;30" halign="left" valign="bottom" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F">
+			<convert type="ServicePosition">Length</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Progress" position="228,281" size="405,8" zPosition="5" foregroundColor="#1A27408B" transparent="1">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<eLabel name="new eLabel" position="228,284" size="405,2" backgroundColor="#00BDBDBD" zPosition="1" />
+		<eLabel name="new eLabel" position="0,240" size="861,89" zPosition="-1" backgroundColor="#1A0F0F0F" />
+		<eLabel name="new eLabel" position="0,240" size="30,89" zPosition="7" backgroundColor="#1A0F0F0F" />
+	</screen>
+	<screen name="SeekBar" position="530,357" zPosition="2" size="861,345" backgroundColor="transparent" flags="wfNoBorder">
+		<widget name="cursor" position="0,0" size="24,36" pixmap="epg/timeline-now_zz.png" alphatest="blend" transparent="1" zPosition="4" />
+		<widget name="target" position="0,60" size="861,180" backgroundColor="#67FFFFFF" foregroundColor="#34FFFFFF" font="Regular;120" halign="center" transparent="1" valign="center" />
+		<widget name="length" position="693,264" size="120,41" font="Regular;30" halign="left" valign="bottom" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F" />
+		<widget source="session.CurrentService" render="Label" position="48,264" size="120,41" font="Regular;30" halign="right" valign="bottom" foregroundColor="#00FFFFFF" backgroundColor="#1A0F0F0F">
+            <convert type="ServicePosition">Position</convert>
+        </widget>
+		<widget source="session.CurrentService" render="PositionGauge" position="228,281" size="405,8" transparent="1" zPosition="5" foregroundColor="#1A27408B">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<eLabel name="new eLabel" position="228,284" size="405,2" backgroundColor="#00BDBDBD" zPosition="1" />
+		<eLabel name="new eLabel" position="0,240" size="861,89" zPosition="-1" backgroundColor="#1A0F0F0F" />
+		<eLabel name="new eLabel" position="0,240" size="30,89" zPosition="7" backgroundColor="#1A0F0F0F" />
+	</screen>
+
 	<!-- Radio Stuff -->
 
 	<screen name="ChannelSelectionRadio" position="0,0" size="1920,1080" title="Channel Selection" flags="wfNoBorder">
