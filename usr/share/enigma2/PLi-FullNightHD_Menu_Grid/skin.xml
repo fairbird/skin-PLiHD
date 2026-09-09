@@ -1527,6 +1527,13 @@
 		<widget name="filelist" position="780,105" size="1110,450" itemHeight="38" font="Regular;28" zPosition="3" transparent="1" scrollbarMode="showOnDemand"/>
 	</screen>
 
+	<!-- Choose upgrade source -->
+
+	<screen name="PackageFeedSelection" title="Select OPKG source" position="fill" flags="wfNoBorder">
+		<panel name="PigTemplate"/>
+		<widget name="feeds" position="780,105" size="1110,450" itemHeight="38" font="Regular;28" zPosition="3" transparent="1" scrollbarMode="showOnDemand"/>
+	</screen>
+
 	<!-- Edit upgrade source -->
 
 	<screen name="OPKGSource" title="OPKG source" position="fill" flags="wfNoBorder">
