@@ -17,6 +17,10 @@
 		<font name="Console" filename="tuxtxt.ttf" scale="100"/>
 		<font name="Fixed" filename="andale.ttf" scale="100"/>
 		<font name="DejaVuSans" filename="DejaVuSans.ttf" scale="100"/>
+		<font name="enigma2icons" filename="enigma2icons.ttf" scale="100" />
+		<alias name="MovieListIcons" font="enigma2icons" size="30" />
+		<alias name="FileListIcons" font="enigma2icons" size="24" />
+		<alias name="ChoiceListIcons" font="enigma2icons" size="24" />
 		<alias name="ChoiceList" font="Regular" size="30" height="38"/>
 		<alias name="TextNormal" font="Regular" size="28" height="38"/>
 		<alias name="ChoiceBoxDescription" font="Regular" size="22" height="25"/>
@@ -95,6 +99,7 @@
 		<color name="yellow" value="#00F9C731"/>
 		<color name="yellowsoft" value="#00CCAC68"/>
 		<color name="yellowtransparent" value="#084b4b00"/>
+		<color name="accent" value="#00ff8c00" />
 	</colors>
 
 	<parameters>
@@ -102,6 +107,16 @@
     		<parameter name="AllowUserDatesAndTimes" value="1,1"/>
     		<!-- Allow User Dates And Times Display -->
     		<parameter name="AllowUserDatesAndTimesDisplay" value="1,1"/>
+    		<!-- MovieListNativeIcons -->
+    		<parameter name="MovieListNativeIcons" value="1" />
+		<parameter name="MovieListIcon_folder" value="59828,yellow,yellow" />
+		<parameter name="MovieListIcon_record" value="60038,red,red" />
+		<parameter name="MovieListIcon_play_record" value="60039,red,red" />
+		<parameter name="MovieListIcon_part_2_4" value="60035,accent,accent" />
+		<!-- ChoiceListNative -->
+		<parameter name="ChoiceListNative" value="1" />
+		<parameter name="ChoiceListIcon_red" value="0xEA12" />
+		<parameter name="ChoiceListIcon_menu" value="0xE911" />
     		<!-- PluginList -->
     		<parameter name="PluginBrowserIcon" value="10,17,100,40" />
     		<parameter name="PluginBrowserName" value="125,5,40" />
