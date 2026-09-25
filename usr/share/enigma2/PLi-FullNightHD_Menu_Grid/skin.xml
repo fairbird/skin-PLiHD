@@ -1880,9 +1880,10 @@
 	<screen name="NetworkOverview" title="Network Overview" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="#16000000">
 		<widget source="Title" render="Label" position="87,54" size="1425,75" noWrap="1" valign="bottom" font="Regular;51" foregroundColor="foreground" backgroundColor="#16000000" halign="left" transparent="1" />
 		<widget source="adapterList" render="Listbox" backgroundColor="#16000000" position="105,120" size="1710,450" scrollbarMode="showOnDemand">
-			<template name="Default" fonts="enigma2icons;51,Regular;36,Regular;27,enigma2icons;30" itemHeight="90" colors="#0000CC00,#00CC0000,#00808080">
+			<template name="Default" fonts="enigma2icons;51,Regular;25,Regular;27,enigma2icons;30" itemHeight="90" colors="#0000CC00,#00CC0000,#00808080">
 				<rowtemplate>
-					<text index="AdapterName" position="21,0" size="705,90" font="2" horizontalAlignment="left" verticalAlignment="center" foregroundColor="grey" />
+					<text index="AdapterName" position="25,0" size="705,90" font="2" horizontalAlignment="left" verticalAlignment="center" foregroundColor="grey" />
+					<text index="StatusText" position="480,0" size="170,90" font="2" horizontalAlignment="left" verticalAlignment="center" foregroundColor="grey" />
 					<text index="MAC" position="735,0" size="285,90" font="2" horizontalAlignment="left" verticalAlignment="center" foregroundColor="grey" />
 					<text index="IPAddress" position="1035,0" size="210,90" font="2" horizontalAlignment="left" verticalAlignment="center" foregroundColor="grey" />
 					<text index="Gateway" position="1260,0" size="210,90" font="2" horizontalAlignment="left" verticalAlignment="center" foregroundColor="grey" />
@@ -1893,7 +1894,8 @@
 					<text index="AdapterName" position="111,9" size="345,39" font="1" horizontalAlignment="left" verticalAlignment="center" />
 					<text index="AdapterType" position="111,48" size="345,33" font="2" horizontalAlignment="left" verticalAlignment="center" />
 					<text index="InternetGlyph" position="420,30" size="30,30" font="3" horizontalAlignment="center" verticalAlignment="center" />
-					<text index="StatusText" position="480,0" size="240,90" font="2" horizontalAlignment="left" verticalAlignment="center" foregroundColor="+StatusColor" foregroundColorSelected="+StatusColor" />
+					<text index="StatusText" position="480,2" size="240,50" font="2" horizontalAlignment="left" verticalAlignment="center" foregroundColor="+StatusColor" foregroundColorSelected="+StatusColor" />
+					<text index="ConnectionText" position="480,48" size="150,25" font="2" padding="5,0" verticalAlignment="center" />
 					<text index="MAC" position="735,0" size="285,90" font="2" horizontalAlignment="left" verticalAlignment="center" />
 					<text index="IPAddress" position="1035,0" size="210,90" font="2" horizontalAlignment="left" verticalAlignment="center" />
 					<text index="Gateway" position="1260,0" size="210,90" font="2" horizontalAlignment="left" verticalAlignment="center" />
