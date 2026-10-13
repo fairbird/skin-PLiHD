@@ -482,7 +482,7 @@
 		<widget name="duration" position="30,712" size="720,45" transparent="1" font="Regular;33" horizontalAlignment="left"/>
 		<widget source="session.Event_Now" render="Label" position="135,712" size="285,45" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;32" horizontalAlignment="right">
 			<convert type="EventTime">Remaining</convert>
-			<convert type="RemainingToText">InMinutes</convert>
+			<convert type="RemainingToText">OnlyMinute</convert>
 		</widget>
 		<widget source="Event" render="Label" position="30,772" size="720,35" transparent="1" zPosition="1" foregroundColor="blue" font="Regular;32" horizontalAlignment="left">
 			<convert type="EventName">Genre</convert>
@@ -1128,7 +1128,7 @@
 		</widget>
 		<widget source="session.Event_Now" render="Label" position="1430,918" size="210,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="foreground" font="Regular;36" horizontalAlignment="right">
 			<convert type="EventTime">Remaining</convert>
-			<convert type="RemainingToText">InMinutes</convert>
+			<convert type="RemainingToText">OnlyMinute</convert>
 		</widget>
 		<widget source="session.Event_Next" render="Label" position="260,963" size="105,45" backgroundColor="secondBG" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;36" horizontalAlignment="left">
 			<convert type="EventTime">StartTime</convert>
