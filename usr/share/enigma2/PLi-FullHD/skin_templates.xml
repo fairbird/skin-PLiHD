@@ -438,7 +438,7 @@
 		<panel name="SelectionTemplate"/>
 		<widget name="list" position="780,108" size="1110,900" itemHeight="45" colorServiceDescription="yellow" transparent="1" serviceNumberFont="Regular;34" scrollbarMode="showOnDemand"
             serviceInfoFont="Regular;32" serviceNameFont="Regular;34" serviceItemHeight="45" foregroundColorServiceNotAvail="notavailable" fieldMargins="15" nonplayableMargins="15"
-            foregroundColorEventSelected="selectedFGEvent" foregroundColorMarkedSelected="red" backgroundColorMarkedSelected="#04101060" progressBarWidth="60" progressPercentWidth="80" itemsDistances="12"
+            foregroundColorEventSelected="selectedFGEvent" foregroundColorMarkedSelected="red" backgroundColorMarkedSelected="#04101060" progressBarWidth="60" itemsDistances="12"
             picServiceEventProgressbar="window/progress.png" progressbarHeight="13" colorEventProgressbarBorder="darkgrey" colorEventProgressbarBorderSelected="darkgrey" progressbarBorderWidth="1"
             colorFallbackItem="fallback" colorServiceDescriptionFallback="selectedFG" colorServiceSelectedFallback="selectedFG" colorServiceDescriptionSelectedFallback="selectedFGEvent"/>
 		<widget source="ServiceEvent" render="Label" position="30,525" size="720,30" foregroundColor="transponderinfo" font="Regular;26" valign="center" halign="left" transparent="1" zPosition="1">
