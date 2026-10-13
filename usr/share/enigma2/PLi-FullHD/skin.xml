@@ -1677,7 +1677,7 @@
 		<panel position="top" size="*,50"/>
 		<panel position="top" size="*,50">
 			<ePixmap pixmap="buttons/red.png" position="left" zPosition="0" size="50,34" transparent="1" alphaTest="blend"/>
-			<widget name="languagetext" position="fill" font="Regular;34"/>
+			<widget name="languagetext" position="fill" font="Regular;34" conditional="languagetext"/>
 		</panel>
 	</screen>
 	<!-- it's the same screen... -->
@@ -1787,7 +1787,7 @@
 		</widget>
 		<widget name="config" valueFont="Regular;28" position="127,655" size="637,270" itemHeight="38" font="Regular;28" transparent="1" zPosition="1" scrollbarMode="showOnDemand"/>
 		<ePixmap pixmap="buttons/red.png" position="810,485" size="34,34" alphaTest="on"/>
-		<widget name="languagetext" position="860,485" size="165,34" font="Regular;28"/>
+		<widget name="languagetext" position="860,485" size="165,34" font="Regular;28" conditional="languagetext"/>
 		<widget name="wizard" pixmap="wizard.png" position="811,120" size="165,261" zPosition="10" alphaTest="on"/>
 		<widget name="rc" position="1623,148" size="231,750" zPosition="10" pixmaps="rc.png,rcold.png" alphaTest="on"/>
 	</screen>
